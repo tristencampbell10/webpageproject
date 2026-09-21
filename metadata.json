@@ -1,0 +1,8 @@
+{
+  "name": "Webpage Project",
+  "description": "A responsive personal webpage and showcase project for Tristen Campbell.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

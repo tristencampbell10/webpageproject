@@ -1,0 +1,24 @@
+[
+  {
+    "id": "5b20abf4-2f12-4946-a244-812660fa93d1",
+    "firstName": "Jamie",
+    "lastName": "Smith",
+    "email": "jamie@example.com",
+    "reason": "Question",
+    "message": "I have a question about your project.",
+    "submittedAt": "2026-09-18T18:32:00.363Z",
+    "replied": true,
+    "repliedAt": "2026-09-18T18:32:00.403Z"
+  },
+  {
+    "id": "a73ce600-3068-4cde-b7e7-12f865e9f13f",
+    "firstName": "Alex",
+    "lastName": "Rivera",
+    "email": "alex@example.com",
+    "reason": "Partnership",
+    "message": "We would love to invite you to present at our student STEM summit.",
+    "submittedAt": "2026-09-18T18:32:00.369Z",
+    "replied": false,
+    "repliedAt": null
+  }
+]

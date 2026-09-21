@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tristen Campbell | Student Portfolio & Web Project</title>
+  <meta name="description" content="Personal portfolio and high school web project for student Tristen Campbell, featuring academics, photography, media, and future aspirations.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="home-page theme-light-blue-cream">
+  <!-- Universal Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="./index.html" class="brand-logo">
+        <div class="logo-badge">TC</div>
+        <div class="brand-meta">
+          <span class="brand-title">Tristen Campbell</span>
+          <span class="brand-subtitle">High School Portfolio</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="./index.html" class="nav-link active">Home</a></li>
+          <li><a href="./media.html" class="nav-link">Media</a></li>
+          <li><a href="./future.html" class="nav-link">Future</a></li>
+          <li><a href="./academics.html" class="nav-link">Academics</a></li>
+          <li><a href="./photography.html" class="nav-link">Photography</a></li>
+          <li><a href="./admin.html" class="nav-link">Admin</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="header-cta-btn">Get In Touch</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-container">
+    <!-- Hero Showcase Section (Light Blue & Cream Modern Portfolio) -->
+    <section class="hero-showcase-container" id="hero">
+      <!-- Background Shapes Layer -->
+      <div class="hero-shapes-layer" aria-hidden="true">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+      </div>
+
+      <!-- Watermark typography running across the hero backdrop -->
+      <div class="hero-watermark" aria-hidden="true">PORTFOLIO</div>
+
+      <div class="hero-grid">
+        <!-- Left Column: Intro & Headline -->
+        <div class="hero-intro">
+          <div class="hero-eyebrow-pill">
+            <span class="pulse-dot"></span> Welcome to my portfolio
+          </div>
+
+          <h1 class="hero-display-name">
+            Tristen <span class="highlight-blue">Campbell</span>
+          </h1>
+
+          <p class="hero-lead-subtitle">
+            Grossmont High School • Student-Athlete • Creative Explorer
+          </p>
+
+          <p class="hero-lead-description">
+            Driven by the relentless dedication of varsity football, an appreciation for cinematic storytelling, and a curious mindset always eager to explore new experiences and enjoy life.
+          </p>
+
+          <div class="hero-actions-row">
+            <a href="#contact" class="btn btn-primary btn-pill">Get In Touch</a>
+            <a href="./media.html" class="btn btn-secondary btn-pill">Explore Media Gallery</a>
+          </div>
+
+          <div class="hero-feature-tags">
+            <span class="hero-feature-tag">🏈 Foothiller Football</span>
+            <span class="hero-feature-tag">🎬 Movies & Shows Fan</span>
+            <span class="hero-feature-tag">⚡ Hands-on Explorer</span>
+            <span class="hero-feature-tag">🌟 Class of 2026</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Framed Student Portrait with Floating Overlay Tags -->
+        <div class="hero-portrait-stage">
+          <!-- Floating Tag Left -->
+          <div class="hero-floating-card floating-left">
+            <div class="floating-icon-box">🏈</div>
+            <div class="floating-text-meta">
+              <strong>Student-Athlete</strong>
+              <small>Grossmont Football</small>
+            </div>
+          </div>
+
+          <!-- Central Framed Headshot -->
+          <div class="hero-portrait-frame">
+            <img 
+              src="./assets/images/tristen-headshot.jpg" 
+              alt="Tristen Campbell - Grossmont High School Student Portrait" 
+              class="hero-portrait-img"
+              width="310"
+              height="330"
+            >
+          </div>
+
+          <!-- Floating Tag Right -->
+          <div class="hero-floating-card floating-right">
+            <div class="floating-icon-box">🎬</div>
+            <div class="floating-text-meta">
+              <strong>Creative Explorer</strong>
+              <small>Living & Learning</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section ("WHO AM I?" - Matching Bottom Half of Reference Template) -->
+    <section class="content-section" id="about">
+      <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+        <span class="page-category-badge">WHO AM I?</span>
+        <h2 class="section-heading">Driven on the Field, Curious in the Studio</h2>
+        <p style="color: var(--text-secondary); font-size: 1rem;">
+          A closer look at my high school journey, athletic mindset, and passions.
+        </p>
+      </div>
+
+      <div class="about-split-grid">
+        <!-- Left Column: Character & Highlights Feature Card -->
+        <div class="about-feature-card">
+          <div class="about-card-badge">★ Student Profile</div>
+          
+          <div class="about-quote-box">
+            "Relentless dedication on the field, creative exploration everywhere else."
+          </div>
+
+          <ul class="about-highlights-list">
+            <li class="about-highlight-item">
+              <span class="about-highlight-icon">✓</span>
+              <span><strong>Foothiller Football:</strong> Discipline, grit, and teamwork</span>
+            </li>
+            <li class="about-highlight-item">
+              <span class="about-highlight-icon">✓</span>
+              <span><strong>Cinema & Shows:</strong> Visual narrative and cinematography</span>
+            </li>
+            <li class="about-highlight-item">
+              <span class="about-highlight-icon">✓</span>
+              <span><strong>Curiosity:</strong> Hands-on projects and new tech hobbies</span>
+            </li>
+            <li class="about-highlight-item">
+              <span class="about-highlight-icon">✓</span>
+              <span><strong>Grossmont High School:</strong> Academic and athletic growth</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: The 3-Paragraph Student Biography -->
+        <div class="about-bio-content">
+          <div class="biography-wrapper" id="studentBiography">
+            <p>
+              Hello! I'm Tristen Campbell, a student-athlete at Grossmont High School. Playing football has been a defining part of my high school experience, teaching me the value of relentless dedication, discipline, and trusting my teammates through every challenge on and off the field.
+            </p>
+            <p>
+              When I'm not on the gridiron or in the classroom, I'm a big fan of movies and shows, appreciating great visual storytelling and cinematography. I have an energetic curiosity for trying out new things—whether that's diving into hands-on creative projects, exploring technology, or picking up new hobbies that push me out of my comfort zone.
+            </p>
+            <p>
+              Above all, I'm focused on living in the moment, making lasting memories with friends and family, and truly enjoying life. This website brings together my high school journey, creative media, and future aspirations—thank you for stopping by!
+            </p>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary btn-pill">Send a Message</a>
+            <a href="./future.html" class="btn btn-secondary btn-pill">View 5-Year Roadmap</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media Showcase Section (Home Page includes at least two images and/or videos) -->
+    <section class="content-section" id="homeMedia">
+      <div class="page-header" style="text-align: left; margin-bottom: 1.5rem;">
+        <span class="page-category-badge">Featured Media</span>
+        <h2 class="section-heading">Featured Highlights & Projects</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          A glimpse into my current development workspace and project presentations.
+        </p>
+      </div>
+
+      <div class="home-media-grid">
+        <!-- Media Item 1: Workspace Image -->
+        <div class="media-feature-card">
+          <img src="./assets/images/coding-workspace.jpg" alt="Tristen's Coding and Development Workspace">
+          <div class="media-feature-info">
+            <h4>Full-Stack Development Lab</h4>
+            <p>Configured for modern JavaScript, interface design, and client-server architecture.</p>
+          </div>
+        </div>
+
+        <!-- Media Item 2: Video Presentation -->
+        <div class="media-feature-card">
+          <video controls preload="metadata">
+            <source src="./assets/videos/presentation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="media-feature-info">
+            <h4>Project Walkthrough Video</h4>
+            <p>Recorded overview of my latest software build and engineering approach.</p>
+          </div>
+        </div>
+
+        <!-- Media Item 3: Robotics / STEM Project Image -->
+        <div class="media-feature-card">
+          <img src="./assets/images/robotics-stem.jpg" alt="Robotics and Engineering Projects">
+          <div class="media-feature-info">
+            <h4>Robotics & Sensor Integration</h4>
+            <p>Hands-on engineering collaboration building autonomous robotics systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section" id="contact">
+      <div class="page-header" style="text-align: left; margin-bottom: 1.5rem;">
+        <span class="page-category-badge">Connect</span>
+        <h2 class="section-heading">Get in Touch</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Have a question, feedback, or collaboration idea? Send me a message directly.
+        </p>
+      </div>
+
+      <div class="contact-section-grid">
+        <!-- Social Media & Contact Info Panel -->
+        <div class="contact-info-panel">
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Contact Channels</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Feel free to connect through social profiles or send an email directly.
+            </p>
+
+            <ul class="contact-channels">
+              <li class="contact-channel-item">
+                <div class="channel-icon">✉</div>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Direct Email</div>
+                  <a href="mailto:tristencampbell80@gmail.com" style="font-weight: 600;">tristencampbell80@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-channel-item">
+                <div class="channel-icon">🐙</div>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">GitHub Profile</div>
+                  <a href="https://github.com/tristencampbell10" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">github.com/tristencampbell10</a>
+                </div>
+              </li>
+              <li class="contact-channel-item">
+                <div class="channel-icon">💼</div>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Student Network</div>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Tristen Campbell on LinkedIn</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div style="padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-muted);">
+            📍 Based in North Carolina, USA • Available for academic and student tech projects.
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-wrapper">
+          <div id="contactSuccessAlert" class="alert-box alert-success" role="alert"></div>
+          <div id="contactErrorAlert" class="alert-box alert-error" role="alert"></div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jamie" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jamie@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reason">Reason for Contact *</label>
+              <select id="reason" name="reason" required>
+                <option value="" disabled selected>-- Select a reason --</option>
+                <option value="Comment">Comment</option>
+                <option value="Question">Question</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Opportunity">Opportunity</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-pill" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-brand-title">Tristen Campbell • High School Web Project</span>
+        <span class="footer-copyright">© 2026 Tristen Campbell. All rights reserved. Built with HTML, CSS, and Express.</span>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./media.html">Media</a></li>
+        <li><a href="./future.html">Future</a></li>
+        <li><a href="./academics.html">Academics</a></li>
+        <li><a href="./photography.html">Photography</a></li>
+        <li><a href="./admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

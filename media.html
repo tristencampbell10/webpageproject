@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Gallery | Tristen Campbell Portfolio</title>
+  <meta name="description" content="Media showcase featuring photos, video walkthroughs, and developer milestones from high school student Tristen Campbell.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Universal Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="./index.html" class="brand-logo">
+        <div class="logo-badge">TC</div>
+        <div class="brand-meta">
+          <span class="brand-title">Tristen Campbell</span>
+          <span class="brand-subtitle">High School Portfolio</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="./index.html" class="nav-link">Home</a></li>
+          <li><a href="./media.html" class="nav-link active">Media</a></li>
+          <li><a href="./future.html" class="nav-link">Future</a></li>
+          <li><a href="./academics.html" class="nav-link">Academics</a></li>
+          <li><a href="./photography.html" class="nav-link">Photography</a></li>
+          <li><a href="./admin.html" class="nav-link">Admin</a></li>
+        </ul>
+      </nav>
+
+      <a href="./index.html#contact" class="header-cta-btn">Get In Touch</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-container">
+    <div class="page-header">
+      <span class="page-category-badge">Visual Showcase</span>
+      <h1 class="page-title">Media & Project Gallery</h1>
+      <p class="page-description">
+        Explore a curated collection of photos, video demonstrations, and student activities capturing my academic path, technical projects, and creative endeavors.
+      </p>
+    </div>
+
+    <!-- Gallery Grid with 9+ Media Cards -->
+    <div class="media-gallery-grid" id="mediaGallery">
+      <!-- Card 1: Student Portrait (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/tristen-headshot.jpg"
+        data-title="Tristen Campbell - Student Profile"
+        data-caption="Official high school senior portrait and student profile photo."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/tristen-headshot.jpg" alt="Tristen Campbell Student Profile">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Student Portrait</h2>
+          <p class="card-caption">Official high school senior portrait and student profile photo.</p>
+        </div>
+      </article>
+
+      <!-- Card 2: Video Walkthrough (Video) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="video" 
+        data-src="./assets/videos/presentation.mp4"
+        data-title="Software Engineering Walkthrough"
+        data-caption="Demonstration of responsive UI layouts and asynchronous API data handling."
+      >
+        <div class="card-media-wrapper">
+          <video muted preload="metadata">
+            <source src="./assets/videos/presentation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Video Recording</span>
+          <h2 class="card-title">Project Video Demonstration</h2>
+          <p class="card-caption">Demonstration of responsive UI layouts and asynchronous API data handling.</p>
+        </div>
+      </article>
+
+      <!-- Card 3: Social Media Post / Embed (Social Embed) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="embed" 
+        data-src="https://github.com/tristencampbell10/webpageproject"
+        data-title="GitHub Developer Update @tristencampbell10"
+        data-caption="Public announcement and commit milestone for the 6-page Webpage Project release."
+      >
+        <div class="card-media-wrapper">
+          <div class="social-embed-box">
+            <div class="social-embed-header">
+              <div class="social-embed-avatar">TC</div>
+              <div>
+                <strong style="color: #fff; font-size: 0.88rem;">Tristen Campbell</strong>
+                <span style="color: #60a5fa; font-size: 0.75rem; font-family: monospace;">@tristencampbell10</span>
+              </div>
+            </div>
+            <p class="social-embed-text">
+              🚀 Just committed the new Express server and Replit App Storage persistence logic for my High School Webpage Project!
+            </p>
+            <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+              <span>GitHub • Repository Release</span>
+              <a href="https://github.com/tristencampbell10/webpageproject" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 600;">Open Post ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Social Embed</span>
+          <h2 class="card-title">GitHub Project Announcement</h2>
+          <p class="card-caption">Public announcement and commit milestone for the 6-page Webpage Project release.</p>
+        </div>
+      </article>
+
+      <!-- Card 4: Coding Workspace (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/coding-workspace.jpg"
+        data-title="Workstation & Dual-Monitor Setup"
+        data-caption="My daily development environment where I code HTML5, CSS3, JavaScript, and Node.js applications."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/coding-workspace.jpg" alt="Coding Workspace">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Developer Workspace</h2>
+          <p class="card-caption">My daily development environment where I code HTML5, CSS3, JavaScript, and Node.js applications.</p>
+        </div>
+      </article>
+
+      <!-- Card 5: Robotics & STEM (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/robotics-stem.jpg"
+        data-title="Robotics Team Build Lab"
+        data-caption="Collaborating on motor microcontroller circuits and automated obstacle-avoidance logic."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/robotics-stem.jpg" alt="Robotics Team Build Lab">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">High School Robotics Lab</h2>
+          <p class="card-caption">Collaborating on motor microcontroller circuits and automated obstacle-avoidance logic.</p>
+        </div>
+      </article>
+
+      <!-- Card 6: Science Fair Showcase (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/science-fair.jpg"
+        data-title="Regional Science & Engineering Fair"
+        data-caption="Presenting an interactive sensor data visualizer at the regional science fair."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/science-fair.jpg" alt="Science and Engineering Fair">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Science Fair Presentation</h2>
+          <p class="card-caption">Presenting an interactive sensor data visualizer at the regional science fair.</p>
+        </div>
+      </article>
+
+      <!-- Card 7: Photography Gear (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/photography-camera.jpg"
+        data-title="Camera Gear & 35mm Prime Lens"
+        data-caption="Equipped for architectural, landscape, and sports photojournalism around school."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/photography-camera.jpg" alt="Camera Gear and Lens">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Photography Kit & Gear</h2>
+          <p class="card-caption">Equipped for architectural, landscape, and sports photojournalism around school.</p>
+        </div>
+      </article>
+
+      <!-- Card 8: Campus Study & Library (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/campus-library.jpg"
+        data-title="Honors Study Sessions"
+        data-caption="Collaborating with fellow classmates on AP Calculus problem sets and coding peer reviews."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/campus-library.jpg" alt="Campus Library Study Sessions">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Academic Study Circle</h2>
+          <p class="card-caption">Collaborating with fellow classmates on AP Calculus problem sets and coding peer reviews.</p>
+        </div>
+      </article>
+
+      <!-- Card 9: Tech Community Meetup (Image) -->
+      <article 
+        class="media-gallery-card" 
+        data-type="image" 
+        data-src="./assets/images/tech-community.jpg"
+        data-title="Student Coding Club Leadership"
+        data-caption="Leading an after-school workshop introducing younger students to web foundations and Git."
+      >
+        <div class="card-media-wrapper">
+          <img src="./assets/images/tech-community.jpg" alt="Student Coding Workshop">
+        </div>
+        <div class="card-body">
+          <span class="card-type-tag">Photograph</span>
+          <h2 class="card-title">Coding Club Workshop</h2>
+          <p class="card-caption">Leading an after-school workshop introducing younger students to web foundations and Git.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Interactive Lightbox Modal -->
+  <div class="lightbox-modal" id="mediaLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <div class="lightbox-media-container" id="lightboxMedia"></div>
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle" style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;"></h3>
+        <p id="lightboxCaption" style="color: var(--text-secondary); font-size: 0.95rem;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-brand-title">Tristen Campbell • High School Web Project</span>
+        <span class="footer-copyright">© 2026 Tristen Campbell. All rights reserved. Built with HTML, CSS, and Express.</span>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./media.html">Media</a></li>
+        <li><a href="./future.html">Future</a></li>
+        <li><a href="./academics.html">Academics</a></li>
+        <li><a href="./photography.html">Photography</a></li>
+        <li><a href="./admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
