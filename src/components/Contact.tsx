@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData.ts';
-import { Mail, MapPin, GitBranch, Send, Check, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Check, MessageSquare } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -54,18 +54,16 @@ export const Contact: React.FC = () => {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
-                  <GitBranch className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-neutral-400">GitHub Profile</p>
+                  <p className="text-xs font-mono text-neutral-400">Phone Number</p>
                   <a
-                    id="contact-github-link"
-                    href={PERSONAL_INFO.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    id="contact-phone-link"
+                    href="tel:6195402444"
                     className="text-sm font-semibold text-white hover:text-blue-400 transition-colors"
                   >
-                    github.com/{PERSONAL_INFO.handle}
+                    (619) 540-2444
                   </a>
                 </div>
               </div>

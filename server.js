@@ -106,6 +106,10 @@ async function writeContacts(contacts) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Backwards-compatibility redirects (placed before express.static)
+app.get(['/academics.html', '/academics', '/choice1.html'], (req, res) => res.redirect(301, '/hobbies.html'));
+app.get(['/photography.html', '/photography', '/choice2.html'], (req, res) => res.redirect(301, '/travel.html'));
+
 // Serve static files with relative paths
 app.use(express.static(__dirname));
 
@@ -242,13 +246,17 @@ app.patch('/api/admin/messages/:id/replied', requireAdminAuth, async (req, res) 
 });
 
 // Friendly page routes & backwards-compatibility redirects
-app.get('/choice1.html', (req, res) => res.redirect(301, '/academics.html'));
-app.get('/choice2.html', (req, res) => res.redirect(301, '/photography.html'));
+app.get('/choice1.html', (req, res) => res.redirect(301, '/hobbies.html'));
+app.get('/choice2.html', (req, res) => res.redirect(301, '/travel.html'));
+app.get('/academics.html', (req, res) => res.redirect(301, '/hobbies.html'));
+app.get('/academics', (req, res) => res.redirect(301, '/hobbies.html'));
+app.get('/photography.html', (req, res) => res.redirect(301, '/travel.html'));
+app.get('/photography', (req, res) => res.redirect(301, '/travel.html'));
 
+app.get('/hobbies', (req, res) => res.sendFile(path.join(__dirname, 'hobbies.html')));
+app.get('/travel', (req, res) => res.sendFile(path.join(__dirname, 'travel.html')));
 app.get('/media', (req, res) => res.sendFile(path.join(__dirname, 'media.html')));
 app.get('/future', (req, res) => res.sendFile(path.join(__dirname, 'future.html')));
-app.get('/academics', (req, res) => res.sendFile(path.join(__dirname, 'academics.html')));
-app.get('/photography', (req, res) => res.sendFile(path.join(__dirname, 'photography.html')));
 app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, 'admin.html')));
 
 // Default page route fallbacks

@@ -318,21 +318,21 @@ function updateReasonChart() {
           label: 'Messages Count',
           data: counts,
           backgroundColor: [
-            'rgba(59, 130, 246, 0.75)',
-            'rgba(16, 185, 129, 0.75)',
-            'rgba(245, 158, 11, 0.75)',
-            'rgba(139, 92, 246, 0.75)',
-            'rgba(236, 72, 153, 0.75)',
+            'rgba(91, 178, 233, 0.85)',
+            'rgba(16, 185, 129, 0.85)',
+            'rgba(245, 158, 11, 0.85)',
+            'rgba(139, 92, 246, 0.85)',
+            'rgba(236, 72, 153, 0.85)',
           ],
           borderColor: [
-            '#3b82f6',
-            '#10b981',
-            '#f59e0b',
-            '#8b5cf6',
-            '#ec4899',
+            '#439ed7',
+            '#059669',
+            '#d97706',
+            '#7c3aed',
+            '#db2777',
           ],
           borderWidth: 1.5,
-          borderRadius: 6,
+          borderRadius: 8,
         },
       ],
     },
@@ -346,7 +346,7 @@ function updateReasonChart() {
         title: {
           display: true,
           text: 'Contact Submissions by Reason',
-          color: '#f8fafc',
+          color: '#0f2438',
           font: {
             size: 15,
             weight: 'bold',
@@ -369,16 +369,19 @@ function updateReasonChart() {
           beginAtZero: true,
           ticks: {
             precision: 0,
-            color: '#94a3b8',
+            color: '#536e88',
             stepSize: 1,
           },
           grid: {
-            color: 'rgba(255, 255, 255, 0.08)',
+            color: 'rgba(15, 36, 56, 0.08)',
           },
         },
         x: {
           ticks: {
-            color: '#cbd5e1',
+            color: '#0f2438',
+            font: {
+              weight: '600',
+            },
           },
           grid: {
             display: false,

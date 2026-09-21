@@ -5,8 +5,9 @@ export const PERSONAL_INFO = {
   handle: 'tristencampbell10',
   title: 'Frontend Developer & Web Creator',
   bio: 'Building responsive, modern, and interactive web experiences with clean code, modern architecture, and intuitive design.',
-  location: 'United States',
+  location: 'San Diego, California',
   email: 'tristencampbell80@gmail.com',
+  phone: '(619) 540-2444',
   github: 'https://github.com/tristencampbell10',
   availableForWork: true,
 };
