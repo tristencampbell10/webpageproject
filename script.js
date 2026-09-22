@@ -116,10 +116,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle media card clicks
   const mediaCards = document.querySelectorAll('.media-gallery-card');
+
+  // Media category filtering buttons
+  const filterBtns = document.querySelectorAll('.media-filter-btn');
+  if (filterBtns.length > 0) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const selectedCategory = btn.dataset.category;
+        mediaCards.forEach((card) => {
+          const cardCategory = card.dataset.category;
+          if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+            card.classList.remove('filter-hidden');
+          } else {
+            card.classList.add('filter-hidden');
+          }
+        });
+      });
+    });
+  }
+
   mediaCards.forEach((card) => {
     card.addEventListener('click', (e) => {
       // If user clicked an external link inside a social card, let it open
-      if (e.target.closest('a')) return;
+      if (e.target.closest('a') || e.target.closest('iframe')) return;
 
       const mediaType = card.dataset.type;
       const mediaSrc = card.dataset.src;
@@ -140,6 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
           vid.controls = true;
           vid.autoplay = true;
           lightboxMediaContainer.appendChild(vid);
+        } else if (mediaType === 'hudl') {
+          const iframe = document.createElement('iframe');
+          iframe.src = mediaSrc;
+          iframe.style.width = '100%';
+          iframe.style.height = '420px';
+          iframe.style.border = 'none';
+          iframe.style.borderRadius = '12px';
+          iframe.setAttribute('allowfullscreen', 'true');
+          lightboxMediaContainer.appendChild(iframe);
         } else if (mediaType === 'embed') {
           const embedBox = card.querySelector('.social-embed-box');
           if (embedBox) {
@@ -162,6 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Stop video playback if open
         const vid = lightboxMediaContainer.querySelector('video');
         if (vid) vid.pause();
+        const iframe = lightboxMediaContainer.querySelector('iframe');
+        if (iframe) iframe.src = '';
         lightboxMediaContainer.innerHTML = '';
       }
     });
@@ -173,6 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lightboxMediaContainer) {
           const vid = lightboxMediaContainer.querySelector('video');
           if (vid) vid.pause();
+          const iframe = lightboxMediaContainer.querySelector('iframe');
+          if (iframe) iframe.src = '';
           lightboxMediaContainer.innerHTML = '';
         }
       }

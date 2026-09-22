@@ -41,18 +41,144 @@
   <!-- Main Content -->
   <main class="page-container">
     <div class="page-header">
-      <span class="page-category-badge">Visual Showcase</span>
-      <h1 class="page-title">Media & Project Gallery</h1>
+      <h1 class="page-title page-title-media">Media &amp; Highlights Showcase</h1>
       <p class="page-description">
-        Explore a curated collection of photos, video demonstrations, and student activities capturing my academic path, technical projects, and creative endeavors.
+        A curated showcase of verified Hudl game film, photography, and student highlights documenting my high school football journey at Grossmont High, STEM coursework, and creative projects.
       </p>
+      <div style="margin-top: 1.15rem;">
+        <span class="page-category-badge badge-media" style="margin-bottom: 0;">🎬 GAME FILM, HIGHLIGHTS &amp; VISUAL ARCHIVE</span>
+      </div>
     </div>
 
-    <!-- Gallery Grid with 9+ Media Cards -->
+    <!-- Quick Media & Athlete Metrics Ribbon -->
+    <div class="media-stats-bar">
+      <div class="media-stat-box">
+        <span class="media-stat-num orange">Hudl Verified</span>
+        <span class="media-stat-label">Game Film: Otay Ranch</span>
+      </div>
+      <div class="media-stat-box">
+        <span class="media-stat-num blue">Grossmont High</span>
+        <span class="media-stat-label">Freshmen Football</span>
+      </div>
+      <div class="media-stat-box">
+        <span class="media-stat-num purple">LSU Tigers Track</span>
+        <span class="media-stat-label">Target Collegiate Destination</span>
+      </div>
+      <div class="media-stat-box">
+        <span class="media-stat-num">10 Showcases</span>
+        <span class="media-stat-label">Film, Photos &amp; Code</span>
+      </div>
+    </div>
+
+    <!-- Featured Spotlight: Hudl Football Highlights -->
+    <section class="featured-media-section" id="football-highlights">
+      <div class="featured-media-card">
+        <div class="featured-player-wrapper">
+          <iframe 
+            src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
+            title="Tristen Campbell - Otay Ranch High School Highlights on Hudl"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="featured-media-info">
+          <div>
+            <div class="featured-pill-row">
+              <span class="featured-tag-hudl">🏈 OFFICIAL HUDL FILM</span>
+              <span class="featured-tag-verified">VERIFIED ATHLETE</span>
+              <span class="featured-tag-verified">CLASS OF 2030</span>
+            </div>
+            <h2 class="featured-title">Otay Ranch Football Highlights</h2>
+            <div class="featured-subtitle">
+              <span>Tristen Campbell</span> • <span>Grossmont High School</span>
+            </div>
+            <p class="featured-desc">
+              Official game tape capturing varsity-pace plays, defensive pursuit, and highlight snaps against Otay Ranch High School. Certified game film curated for high school scouts and future college football recruiting.
+            </p>
+          </div>
+          <div class="featured-action-bar">
+            <a 
+              href="https://www.hudl.com/video/3/23134114/6aad40878c39b2e02772afcf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-sm"
+              style="background: #ff6600; color: #ffffff; border: 1px solid #ff6600; border-radius: 9999px; font-weight: 800; padding: 0.5rem 1.25rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;"
+            >
+              Watch on Hudl ↗
+            </a>
+            <a 
+              href="./future.html" 
+              class="btn btn-sm"
+              style="background: rgba(255, 255, 255, 0.1); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9999px; font-weight: 700; padding: 0.5rem 1.25rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;"
+            >
+              View LSU Roadmap 🐯
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Control Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.75rem;">
+      <div class="media-filter-bar" id="mediaFilterBar">
+        <button type="button" class="media-filter-btn active" data-category="all">All Media (10)</button>
+        <button type="button" class="media-filter-btn" data-category="athletics">🏈 Football &amp; Film</button>
+        <button type="button" class="media-filter-btn" data-category="photo">📸 Photography</button>
+        <button type="button" class="media-filter-btn" data-category="tech">💻 STEM &amp; Tech</button>
+      </div>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;">
+        💡 Click any photo or card to view in full resolution
+      </span>
+    </div>
+
+    <!-- Gallery Grid with Media Cards -->
     <div class="media-gallery-grid" id="mediaGallery">
-      <!-- Card 1: Student Portrait (Image) -->
+      <!-- Card 1: Football Highlight Reel (Hudl Film) -->
+      <article 
+        class="media-gallery-card hudl-card" 
+        data-category="athletics"
+        data-type="hudl" 
+        data-src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf"
+        data-title="Tristen Campbell - Otay Ranch High School Football Highlights"
+        data-caption="Official Hudl football game film featuring play highlights by Tristen Campbell against Otay Ranch High School."
+      >
+        <div class="card-media-wrapper" style="position: relative; background: #000;">
+          <iframe 
+            src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
+            title="Tristen Campbell Otay Ranch High School Highlights on Hudl"
+            allowfullscreen
+            loading="lazy"
+            style="width: 100%; height: 100%; border: none;"
+          ></iframe>
+        </div>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag tag-hudl">🏈 Hudl Highlight Reel</span>
+            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">VERIFIED</span>
+          </div>
+          <h2 class="card-title">Otay Ranch Football Highlights</h2>
+          <p class="card-caption">
+            Official Hudl game footage and athletic plays by Tristen Campbell against Otay Ranch High School.
+          </p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="https://www.hudl.com/video/3/23134114/6aad40878c39b2e02772afcf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-sm"
+              style="background: #ff6600; color: #ffffff; border: 1px solid #ff6600; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none;"
+            >
+              Open on Hudl ↗
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Grossmont High</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Student Portrait (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="photo"
         data-type="image" 
         data-src="./assets/images/tristen-headshot.jpg"
         data-title="Tristen Campbell - Student Profile"
@@ -68,29 +194,29 @@
         </div>
       </article>
 
-      <!-- Card 2: Video Walkthrough (Video) -->
+      <!-- Card 3: Football Athletics Gameday Action -->
       <article 
         class="media-gallery-card" 
-        data-type="video" 
-        data-src="./assets/videos/presentation.mp4"
-        data-title="Software Engineering Walkthrough"
-        data-caption="Demonstration of responsive UI layouts and asynchronous API data handling."
+        data-category="athletics"
+        data-type="image" 
+        data-src="./assets/images/hobby-football.jpg"
+        data-title="Grossmont Football - Gameday Action"
+        data-caption="High-energy gameday action, team huddles, and Friday night football excitement."
       >
         <div class="card-media-wrapper">
-          <video muted preload="metadata">
-            <source src="./assets/videos/presentation.mp4" type="video/mp4">
-          </video>
+          <img src="./assets/images/hobby-football.jpg" alt="Grossmont Football Gameday Action">
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Video Recording</span>
-          <h2 class="card-title">Project Video Demonstration</h2>
-          <p class="card-caption">Demonstration of responsive UI layouts and asynchronous API data handling.</p>
+          <span class="card-type-tag tag-athletics">Athletics Film</span>
+          <h2 class="card-title">Football Gameday Action</h2>
+          <p class="card-caption">High-energy gameday action, team huddles, and Friday night football excitement.</p>
         </div>
       </article>
 
-      <!-- Card 3: Social Media Post / Embed (Social Embed) -->
+      <!-- Card 4: Social Media Post / Embed (Social Embed) -->
       <article 
         class="media-gallery-card" 
+        data-category="tech"
         data-type="embed" 
         data-src="https://github.com/tristencampbell10/webpageproject"
         data-title="GitHub Developer Update @tristencampbell10"
@@ -115,15 +241,16 @@
           </div>
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Social Embed</span>
+          <span class="card-type-tag tag-social">Social Embed</span>
           <h2 class="card-title">GitHub Project Announcement</h2>
           <p class="card-caption">Public announcement and commit milestone for the 6-page Webpage Project release.</p>
         </div>
       </article>
 
-      <!-- Card 4: Coding Workspace (Image) -->
+      <!-- Card 5: Coding Workspace (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="tech"
         data-type="image" 
         data-src="./assets/images/coding-workspace.jpg"
         data-title="Workstation & Dual-Monitor Setup"
@@ -133,15 +260,16 @@
           <img src="./assets/images/coding-workspace.jpg" alt="Coding Workspace">
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
+          <span class="card-type-tag tag-tech">Tech &amp; Code</span>
           <h2 class="card-title">Developer Workspace</h2>
           <p class="card-caption">My daily development environment where I code HTML5, CSS3, JavaScript, and Node.js applications.</p>
         </div>
       </article>
 
-      <!-- Card 5: Robotics & STEM (Image) -->
+      <!-- Card 6: Robotics & STEM (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="tech"
         data-type="image" 
         data-src="./assets/images/robotics-stem.jpg"
         data-title="Robotics Team Build Lab"
@@ -151,15 +279,16 @@
           <img src="./assets/images/robotics-stem.jpg" alt="Robotics Team Build Lab">
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
+          <span class="card-type-tag tag-tech">STEM Lab</span>
           <h2 class="card-title">High School Robotics Lab</h2>
           <p class="card-caption">Collaborating on motor microcontroller circuits and automated obstacle-avoidance logic.</p>
         </div>
       </article>
 
-      <!-- Card 6: Science Fair Showcase (Image) -->
+      <!-- Card 7: Science Fair Showcase (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="tech"
         data-type="image" 
         data-src="./assets/images/science-fair.jpg"
         data-title="Regional Science & Engineering Fair"
@@ -169,15 +298,16 @@
           <img src="./assets/images/science-fair.jpg" alt="Science and Engineering Fair">
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
+          <span class="card-type-tag tag-tech">Presentation</span>
           <h2 class="card-title">Science Fair Presentation</h2>
           <p class="card-caption">Presenting an interactive sensor data visualizer at the regional science fair.</p>
         </div>
       </article>
 
-      <!-- Card 7: Photography Gear (Image) -->
+      <!-- Card 8: Photography Gear (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="photo"
         data-type="image" 
         data-src="./assets/images/photography-camera.jpg"
         data-title="Camera Gear & 35mm Prime Lens"
@@ -188,14 +318,15 @@
         </div>
         <div class="card-body">
           <span class="card-type-tag">Photograph</span>
-          <h2 class="card-title">Photography Kit & Gear</h2>
+          <h2 class="card-title">Photography Kit &amp; Gear</h2>
           <p class="card-caption">Equipped for architectural, landscape, and sports photojournalism around school.</p>
         </div>
       </article>
 
-      <!-- Card 8: Campus Study & Library (Image) -->
+      <!-- Card 9: Campus Study & Library (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="photo"
         data-type="image" 
         data-src="./assets/images/campus-library.jpg"
         data-title="Honors Study Sessions"
@@ -211,9 +342,10 @@
         </div>
       </article>
 
-      <!-- Card 9: Tech Community Meetup (Image) -->
+      <!-- Card 10: Tech Community Meetup (Image) -->
       <article 
         class="media-gallery-card" 
+        data-category="tech"
         data-type="image" 
         data-src="./assets/images/tech-community.jpg"
         data-title="Student Coding Club Leadership"
@@ -223,7 +355,7 @@
           <img src="./assets/images/tech-community.jpg" alt="Student Coding Workshop">
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
+          <span class="card-type-tag tag-tech">Workshop</span>
           <h2 class="card-title">Coding Club Workshop</h2>
           <p class="card-caption">Leading an after-school workshop introducing younger students to web foundations and Git.</p>
         </div>

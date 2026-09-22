@@ -304,6 +304,139 @@ main {
   line-height: 1.2;
 }
 
+/* Future Page - Official LSU Purple (#461D7C) and LSU Gold (#FDD023) Heading */
+.page-title-lsu {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  display: inline-block;
+}
+
+.title-lsu-purple {
+  color: #461D7C;
+  font-weight: 900;
+  display: inline;
+}
+
+.title-lsu-amp {
+  color: #7b2cbf;
+  font-weight: 700;
+  display: inline;
+  margin: 0 0.15em;
+}
+
+.title-lsu-gold {
+  color: #b45309;
+  font-weight: 900;
+  display: inline;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .title-lsu-purple {
+    background: linear-gradient(135deg, #32125a 0%, #461D7C 60%, #68269e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .title-lsu-gold {
+    background: linear-gradient(135deg, #a16207 0%, #d97706 45%, #eab308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.badge-lsu {
+  background-color: #461D7C !important;
+  color: #FDD023 !important;
+  border: 1.5px solid #FDD023 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  box-shadow: 0 4px 14px rgba(70, 29, 124, 0.3) !important;
+}
+
+.section-heading-lsu {
+  color: #461D7C;
+}
+
+/* Hobbies Page - Energetic Athletic Navy & Electric Cyan Heading */
+.page-title-hobbies {
+  color: #1e3a8a;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .page-title-hobbies {
+    background: linear-gradient(135deg, #0f2438 0%, #1d4ed8 55%, #0284c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.badge-hobbies {
+  background-color: rgba(29, 78, 216, 0.1) !important;
+  color: #1d4ed8 !important;
+  border: 1.5px solid rgba(29, 78, 216, 0.35) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.section-heading-hobbies {
+  color: #1e3a8a;
+}
+
+/* Travel Page - Wanderlust Tropical Ocean Teal & Azure Heading */
+.page-title-travel {
+  color: #0f4c5c;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .page-title-travel {
+    background: linear-gradient(135deg, #0c3e4a 0%, #0284c7 45%, #0d9488 80%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.badge-travel {
+  background-color: rgba(13, 148, 136, 0.12) !important;
+  color: #0f766e !important;
+  border: 1.5px solid rgba(13, 148, 136, 0.4) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.section-heading-travel {
+  color: #0f4c5c;
+}
+
+/* Media Page - Cinematic Violet, Deep Slate & Warm Gold Accent Heading */
+.page-title-media {
+  color: #0f2438;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .page-title-media {
+    background: linear-gradient(135deg, #0f2438 0%, #312e81 40%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.badge-media {
+  background-color: rgba(234, 88, 12, 0.12) !important;
+  color: #c2410c !important;
+  border: 1.5px solid rgba(234, 88, 12, 0.4) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.section-heading-media {
+  color: #0f2438;
+}
+
 .page-description {
   color: var(--text-secondary);
   font-size: 1.1rem;
@@ -1476,10 +1609,221 @@ body.home-page .footer-nav a:hover,
 /* =========================================================
    Media Page Styles
    ========================================================= */
+
+/* Media Stats Ribbon */
+.media-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.media-stat-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.15rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(15, 36, 56, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.media-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-blue);
+}
+
+.media-stat-num {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.media-stat-num.orange {
+  color: #ea580c;
+}
+
+.media-stat-num.blue {
+  color: #1d4ed8;
+}
+
+.media-stat-num.purple {
+  color: #461d7c;
+}
+
+.media-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Featured Media Spotlight Hero (Hudl Widescreen Cinema) */
+.featured-media-section {
+  margin-bottom: 2.75rem;
+}
+
+.featured-media-card {
+  background: linear-gradient(145deg, #0a1726 0%, #112236 60%, #1a2e47 100%);
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(10, 23, 38, 0.28);
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: stretch;
+}
+
+@media (max-width: 920px) {
+  .featured-media-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured-player-wrapper {
+  position: relative;
+  background: #000;
+  min-height: 360px;
+  width: 100%;
+}
+
+.featured-player-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.featured-media-info {
+  padding: 2.25rem 2rem;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featured-pill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.featured-tag-hudl {
+  background: #ff6600;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.featured-tag-verified {
+  background: rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+  font-family: monospace;
+}
+
+.featured-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.featured-subtitle {
+  font-size: 0.92rem;
+  color: #ff944d;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.featured-desc {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featured-action-bar {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Media Filter Pill Bar */
+.media-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem;
+  border-radius: 9999px;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(15, 36, 56, 0.03);
+}
+
+.media-filter-btn {
+  padding: 0.45rem 1.15rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+}
+
+.media-filter-btn:hover {
+  color: var(--text-primary);
+  background: rgba(137, 207, 240, 0.15);
+}
+
+.media-filter-btn.active {
+  background: #0f2438;
+  color: #ffffff;
+  border-color: #0f2438;
+  box-shadow: 0 4px 12px rgba(15, 36, 56, 0.2);
+}
+
 .media-gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.75rem;
+}
+
+.media-gallery-card.filter-hidden {
+  display: none !important;
 }
 
 .media-gallery-card {
@@ -1508,9 +1852,11 @@ body.home-page .footer-nav a:hover,
 }
 
 .card-media-wrapper img,
-.card-media-wrapper video {
+.card-media-wrapper video,
+.card-media-wrapper iframe {
   width: 100%;
   height: 100%;
+  border: none;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -1578,6 +1924,30 @@ body.home-page .footer-nav a:hover,
   border-radius: 6px;
   border: 1px solid rgba(91, 178, 233, 0.35);
   align-self: flex-start;
+}
+
+.card-type-tag.tag-hudl {
+  background: #ff6600 !important;
+  color: #ffffff !important;
+  border-color: #ff6600 !important;
+}
+
+.card-type-tag.tag-athletics {
+  background: rgba(29, 78, 216, 0.15) !important;
+  color: #1d4ed8 !important;
+  border-color: rgba(29, 78, 216, 0.35) !important;
+}
+
+.card-type-tag.tag-social {
+  background: rgba(123, 44, 191, 0.15) !important;
+  color: #7b2cbf !important;
+  border-color: rgba(123, 44, 191, 0.35) !important;
+}
+
+.card-type-tag.tag-tech {
+  background: rgba(15, 118, 110, 0.15) !important;
+  color: #0f766e !important;
+  border-color: rgba(15, 118, 110, 0.35) !important;
 }
 
 .card-title {
@@ -2179,16 +2549,28 @@ body.home-page .footer-nav a:hover,
   align-items: center;
 }
 
-.academic-courses-grid,
-.hobbies-grid {
+.academic-courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.course-card,
-.hobby-card {
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.course-card {
   background-color: var(--bg-surface-elevated);
   border: 1px solid var(--border-color);
   border-radius: 16px;
@@ -2199,11 +2581,71 @@ body.home-page .footer-nav a:hover,
   flex-direction: column;
 }
 
-.course-card:hover,
-.hobby-card:hover {
+.course-card:hover {
   border-color: #5bb2e9;
   box-shadow: 0 8px 25px rgba(91, 178, 233, 0.2);
   transform: translateY(-3px);
+}
+
+.hobby-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(15, 36, 56, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hobby-card:hover {
+  border-color: #5bb2e9;
+  box-shadow: 0 14px 35px rgba(91, 178, 233, 0.22);
+  transform: translateY(-4px);
+}
+
+.hobby-card-media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #faf5ec;
+}
+
+.hobby-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hobby-card:hover .hobby-card-media img {
+  transform: scale(1.06);
+}
+
+.hobby-media-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(15, 36, 56, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fffdf9;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 253, 249, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hobby-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .hobby-card-header {
