@@ -26,10 +26,10 @@
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="./index.html" class="nav-link">Home</a></li>
-          <li><a href="./hobbies.html" class="nav-link">Hobbies</a></li>
-          <li><a href="./future.html" class="nav-link active">Future</a></li>
-          <li><a href="./travel.html" class="nav-link">Travel</a></li>
           <li><a href="./media.html" class="nav-link">Media</a></li>
+          <li><a href="./future.html" class="nav-link active">Future</a></li>
+          <li><a href="./hobbies.html" class="nav-link">Hobbies</a></li>
+          <li><a href="./travel.html" class="nav-link">Travel</a></li>
           <li><a href="./admin.html" class="nav-link">Admin</a></li>
         </ul>
       </nav>
@@ -48,24 +48,120 @@
       </p>
     </div>
 
-    <!-- Overview Story Section -->
-    <section class="content-section">
-      <div class="feature-grid-2col">
+    <!-- Quick Athlete Metrics Ribbon -->
+    <div class="athlete-stats-bar">
+      <div class="athlete-stat-box">
+        <span class="athlete-stat-num purple">LSU Tigers</span>
+        <span class="athlete-stat-label">Target Collegiate Program</span>
+      </div>
+      <div class="athlete-stat-box">
+        <span class="athlete-stat-num">NCAA D1</span>
+        <span class="athlete-stat-label">Southeastern Conference (SEC)</span>
+      </div>
+      <div class="athlete-stat-box">
+        <span class="athlete-stat-num">Grossmont</span>
+        <span class="athlete-stat-label">Current High School Team</span>
+      </div>
+      <div class="athlete-stat-box">
+        <span class="athlete-stat-num purple">Fall 2030</span>
+        <span class="athlete-stat-label">Freshman Class Goal</span>
+      </div>
+    </div>
+
+    <!-- LSU Spotlight & Athlete Vision (Hero 2-Col Split Layout) -->
+    <section class="lsu-athlete-hero">
+      <!-- Left: Authentic LSU Collegiate Card with requested logo -->
+      <div class="lsu-brand-card">
+        <span class="lsu-collegiate-tag">Collegiate Target • NCAA FBS</span>
+        
+        <div class="lsu-logo-wrapper">
+          <img 
+            src="https://1000logos.net/wp-content/uploads/2017/10/LSU-Logo-2007.jpg" 
+            alt="Louisiana State University LSU Tigers Official Logo" 
+            class="lsu-logo-img" 
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/lsu-logo.jpg';"
+          >
+        </div>
+
+        <h2 class="lsu-brand-title">Louisiana State University</h2>
+        <span class="lsu-brand-sub">LSU Fighting Tigers • Football</span>
+
+        <div class="lsu-meta-badges">
+          <span class="lsu-pill highlight">💜 Geaux Tigers 💛</span>
+          <span class="lsu-pill">Baton Rouge, LA</span>
+          <span class="lsu-pill">SEC Western Division</span>
+          <span class="lsu-pill">Death Valley</span>
+        </div>
+      </div>
+
+      <!-- Right: Vision, Drive & Mindset Card -->
+      <div class="lsu-vision-card">
         <div>
           <h2 class="section-heading">Vision & The Tiger Dream</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.65;">
-            Ever since putting on pads, my ultimate collegiate dream has been clear: earn my spot at <strong>Louisiana State University (LSU)</strong> and represent the purple and gold under the roaring Saturday night lights of Tiger Stadium (Death Valley).
+          <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.75rem;">
+            Ever since putting on pads, my ultimate collegiate dream has been clear: earn my spot at <strong>Louisiana State University (LSU)</strong> and represent the purple and gold under the roaring Saturday night lights of Tiger Stadium.
           </p>
+          <div class="lsu-quote-banner">
+            "Saturday Night in Death Valley isn't given—it's earned through every rep in the weight room, every sprint on the track, and every film session after practice."
+          </div>
           <p style="color: var(--text-secondary); line-height: 1.65;">
-            Reaching SEC Division 1 college football demands relentless work on and off the field. It takes grueling early morning weight sessions, film study, speed and agility drills, and maintaining strong academic discipline. As a freshman currently playing football at Grossmont High School, every snap and workout is a step toward making that collegiate dream a reality.
+            Reaching SEC Division 1 football demands relentless discipline. As a freshman playing football at Grossmont High School, every snap and workout is building the foundation to become a physical, relentless college football player.
           </p>
         </div>
-        <div>
-          <img 
-            src="./assets/images/future-university.jpg" 
-            alt="Collegiate Stadium and University Campus" 
-            style="border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 8px 25px rgba(15,36,56,0.08); width: 100%; height: auto; object-fit: cover;"
-          >
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="#roadmap" class="btn btn-primary btn-pill">Explore 5-Year Roadmap</a>
+          <a href="./media.html" class="btn btn-secondary btn-pill">Watch Football Highlights</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Strategic Preparation Pillars Grid -->
+    <section class="content-section" style="margin-top: 1rem;">
+      <h2 class="section-heading">The Three Pillars of Preparation</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        How I'm preparing every day to transition from high school football to collegiate athletics:
+      </p>
+
+      <div class="pillars-grid-3col">
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🏈</div>
+          <h3 class="pillar-title">On-Field Mechanics</h3>
+          <p class="pillar-desc">
+            Mastering route disciplines, blocking assignments, and high-speed tackle techniques while perfecting position-specific football IQ.
+          </p>
+          <ul class="pillar-list">
+            <li>Speed & 40-yard dash conditioning</li>
+            <li>Footwork & agility ladder drills</li>
+            <li>Film breakdown & defensive schemes</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box purple">🏋️‍♂️</div>
+          <h3 class="pillar-title">Strength & Power</h3>
+          <p class="pillar-desc">
+            Year-round progressive overload weight training focused on explosive lower-body drive, core stability, and injury prevention.
+          </p>
+          <ul class="pillar-list">
+            <li>Squat, clean, and bench benchmarks</li>
+            <li>Mobility and plyometric training</li>
+            <li>High-protein sports nutrition</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🎓</div>
+          <h3 class="pillar-title">Academic Eligibility</h3>
+          <p class="pillar-desc">
+            Excelling in the classroom to surpass all NCAA Eligibility Center requirements and maintain a college-ready academic portfolio.
+          </p>
+          <ul class="pillar-list">
+            <li>Target 3.5+ cumulative GPA</li>
+            <li>NCAA 16 Core Course completion</li>
+            <li>Campus leadership & character</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -88,7 +184,7 @@
     </section>
 
     <!-- 5-Year Year-by-Year Timeline -->
-    <section class="content-section" style="margin-top: 2.5rem;">
+    <section class="content-section" id="roadmap" style="margin-top: 3rem;">
       <h2 class="section-heading">Five-Year Football & Academic Roadmap (2026 – 2031)</h2>
       <p style="color: var(--text-secondary); margin-bottom: 2rem;">
         The strategic progression from high school freshman to collegiate freshman on the LSU gridiron:
@@ -167,10 +263,10 @@
       </div>
       <ul class="footer-nav">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./hobbies.html">Hobbies</a></li>
-        <li><a href="./future.html">Future</a></li>
-        <li><a href="./travel.html">Travel</a></li>
         <li><a href="./media.html">Media</a></li>
+        <li><a href="./future.html">Future</a></li>
+        <li><a href="./hobbies.html">Hobbies</a></li>
+        <li><a href="./travel.html">Travel</a></li>
         <li><a href="./admin.html">Admin</a></li>
       </ul>
     </div>
