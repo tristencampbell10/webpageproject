@@ -103,8 +103,8 @@ async function writeContacts(contacts) {
 }
 
 // Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '25mb' }));
+app.use(express.urlencoded({ limit: '25mb', extended: true }));
 
 // Backwards-compatibility redirects (placed before express.static)
 app.get(['/academics.html', '/academics', '/choice1.html'], (req, res) => res.redirect(301, '/hobbies.html'));
