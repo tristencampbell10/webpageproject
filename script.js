@@ -117,6 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle media card clicks
   const mediaCards = document.querySelectorAll('.media-gallery-card');
 
+  // Show the real gallery size rather than relying on a hand-maintained label.
+  const allMediaFilter = [...document.querySelectorAll('.media-filter-btn')]
+    .find((btn) => btn.dataset.category === 'all');
+  if (allMediaFilter) {
+    allMediaFilter.textContent = `All Media (${mediaCards.length})`;
+  }
+
   // Media category filtering buttons
   const filterBtns = document.querySelectorAll('.media-filter-btn');
   if (filterBtns.length > 0) {
@@ -197,6 +204,45 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Render a genuine public GitHub event when available; keep the profile link
+  // usable if GitHub is offline or its public API is rate-limited.
+  const githubActivityStatus = document.getElementById('githubActivityStatus');
+  const githubActivityLink = document.getElementById('githubActivityLink');
+  if (githubActivityStatus && githubActivityLink) {
+    fetch('https://api.github.com/users/tristencampbell10/events/public?per_page=20', {
+      headers: { Accept: 'application/vnd.github+json' },
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error(`GitHub activity request failed (${response.status})`);
+        return response.json();
+      })
+      .then((events) => {
+        const recentPush = events.find((event) =>
+          event.type === 'PushEvent'
+          && event.actor?.login === 'tristencampbell10'
+          && event.payload?.head
+          && event.repo?.name,
+        );
+        if (!recentPush) {
+          githubActivityStatus.textContent = 'View my public repositories and project history.';
+          return;
+        }
+
+        const repository = recentPush.repo.name;
+        const commit = recentPush.payload.commits?.at(-1);
+        const commitUrl = `https://github.com/${repository}/commit/${recentPush.payload.head}`;
+        githubActivityStatus.textContent = commit?.message
+          ? `Recent update: ${commit.message.split('\n')[0]}`
+          : `Recent public update to ${repository}.`;
+        githubActivityLink.href = commitUrl;
+        githubActivityLink.textContent = 'Open original update ↗';
+      })
+      .catch((error) => {
+        console.warn('Unable to load public GitHub activity:', error.message);
+        githubActivityStatus.textContent = 'View my public profile and project repository.';
+      });
+  }
 
   if (lightboxClose && lightbox) {
     lightboxClose.addEventListener('click', () => {

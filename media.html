@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media | Tristen Campbell Portfolio</title>
   <meta name="description" content="Media showcase featuring photos, video walkthroughs, and developer milestones from high school student Tristen Campbell.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="theme-light-blue-cream">
@@ -43,7 +44,7 @@
     <div class="page-header">
       <h1 class="page-title page-title-media">Media</h1>
       <p class="page-description">
-        A curated showcase of verified Hudl game film, photography, and student highlights documenting my high school football journey at Grossmont High, STEM coursework, and creative projects.
+        A collection of football highlights, favorite media, and projects connected to my interests and high school experience.
       </p>
       <div style="margin-top: 1.15rem;">
         <span class="page-category-badge badge-media" style="margin-bottom: 0;">🎬 GAME FILM, HIGHLIGHTS &amp; VISUAL ARCHIVE</span>
@@ -53,8 +54,8 @@
     <!-- Quick Media & Athlete Metrics Ribbon -->
     <div class="media-stats-bar">
       <div class="media-stat-box">
-        <span class="media-stat-num orange">Hudl Verified</span>
-        <span class="media-stat-label">Game Film: Otay Ranch</span>
+        <span class="media-stat-num orange">Hudl Highlights</span>
+        <span class="media-stat-label">Football Game Film</span>
       </div>
       <div class="media-stat-box">
         <span class="media-stat-num blue">Grossmont High</span>
@@ -85,33 +86,33 @@
 
     <!-- Gallery Grid with Media Cards -->
     <div class="media-gallery-grid" id="mediaGallery">
-      <!-- Card 1: Football Highlight Reel (Hudl Film) -->
+      <!-- Card 1: Football highlight video hosted on Hudl -->
       <article 
         class="media-gallery-card hudl-card" 
         id="football-highlights"
         data-category="athletics"
-        data-type="hudl" 
-        data-src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf"
+        data-type="image" 
+        data-src="./assets/images/hobby-football.jpg"
         data-title="Tristen Campbell Football Highlight"
-        data-caption="Official Hudl football game film featuring play highlights by Tristen Campbell against Otay Ranch High School."
+        data-caption="Football highlight video hosted on Hudl. Open the original Hudl page to watch the game film."
       >
         <div class="card-media-wrapper" style="position: relative; background: #000;">
-          <iframe 
-            src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
-            title="Tristen Campbell Football Highlight on Hudl"
-            allowfullscreen
+          <img
+            src="./assets/images/hobby-football.jpg"
+            alt="Football image linking to Tristen Campbell's Hudl highlight video"
             loading="lazy"
-            style="width: 100%; height: 100%; border: none;"
-          ></iframe>
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
+          <span aria-hidden="true" style="position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 2.75rem; text-shadow: 0 2px 12px #000;">▶</span>
         </div>
         <div class="card-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <span class="card-type-tag tag-hudl">🏈 Hudl Highlight Reel</span>
-            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">VERIFIED</span>
+            <span class="card-type-tag tag-hudl">🏈 Football Video</span>
+            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">HUDL</span>
           </div>
           <h2 class="card-title">Tristen Campbell Football Highlight</h2>
           <p class="card-caption">
-            Official Hudl game footage and athletic plays by Tristen Campbell against Otay Ranch High School.
+            Open the original Hudl page to watch the football game video.
           </p>
           <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
             <a 
@@ -121,7 +122,7 @@
               class="btn btn-sm"
               style="background: #ff6600; color: #ffffff; border: 1px solid #ff6600; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none;"
             >
-              Open on Hudl ↗
+              Watch video on Hudl ↗
             </a>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Grossmont High</span>
           </div>
@@ -143,7 +144,7 @@
         <div class="card-body">
           <span class="card-type-tag">Photograph</span>
           <h2 class="card-title">Student Portrait</h2>
-          <p class="card-caption">Official high school senior portrait and student profile photo.</p>
+          <p class="card-caption">Student profile photo.</p>
         </div>
       </article>
 
@@ -186,14 +187,14 @@
         </div>
       </article>
 
-      <!-- Card 4: Social Media Post / Embed (Social Embed) -->
+      <!-- Card 4: Real public GitHub profile and project -->
       <article 
         class="media-gallery-card" 
         data-category="tech"
         data-type="embed" 
-        data-src="https://github.com/tristencampbell10/webpageproject"
-        data-title="GitHub Developer Update @tristencampbell10"
-        data-caption="Public announcement and commit milestone for the 6-page Webpage Project release."
+        data-src="https://github.com/tristencampbell10"
+        data-title="Tristen Campbell's GitHub Profile"
+        data-caption="Open my public GitHub profile or view the portfolio project repository."
       >
         <div class="card-media-wrapper">
           <div class="social-embed-box">
@@ -205,18 +206,18 @@
               </div>
             </div>
             <p class="social-embed-text">
-              🚀 Just committed the new Express server and Replit App Storage persistence logic for my High School Webpage Project!
+              <span id="githubActivityStatus" aria-live="polite">Loading recent public GitHub activity…</span>
             </p>
             <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-              <span>GitHub • Repository Release</span>
-              <a href="https://github.com/tristencampbell10/webpageproject" target="_blank" rel="noopener noreferrer" style="color: #2071a1; font-weight: 700;">Open Post ↗</a>
+              <span>GitHub • Public Profile</span>
+              <a id="githubActivityLink" href="https://github.com/tristencampbell10" target="_blank" rel="noopener noreferrer" style="color: #2071a1; font-weight: 700;">Open Profile ↗</a>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <span class="card-type-tag tag-social">Social Embed</span>
-          <h2 class="card-title">GitHub Project Announcement</h2>
-          <p class="card-caption">Public announcement and commit milestone for the 6-page Webpage Project release.</p>
+          <span class="card-type-tag tag-social">GitHub Profile</span>
+          <h2 class="card-title">My GitHub Profile</h2>
+          <p class="card-caption">A live card for recent public project activity, linked to its original GitHub update.</p>
         </div>
       </article>
 
