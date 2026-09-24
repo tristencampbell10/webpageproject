@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const img = document.createElement('img');
           img.src = mediaSrc;
           img.alt = title;
+          img.referrerPolicy = 'no-referrer';
           lightboxMediaContainer.appendChild(img);
         } else if (mediaType === 'video') {
           const vid = document.createElement('video');
@@ -171,6 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
           iframe.style.borderRadius = '12px';
           iframe.setAttribute('allowfullscreen', 'true');
           lightboxMediaContainer.appendChild(iframe);
+        } else if (mediaType === 'youtube') {
+          const iframe = document.createElement('iframe');
+          const autoSrc = mediaSrc.includes('?') ? `${mediaSrc}&autoplay=1` : `${mediaSrc}?autoplay=1`;
+          iframe.src = autoSrc;
+          iframe.style.width = '100%';
+          iframe.style.height = '420px';
+          iframe.style.border = 'none';
+          iframe.style.borderRadius = '12px';
+          iframe.setAttribute('allowfullscreen', 'true');
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          lightboxMediaContainer.appendChild(iframe);
         } else if (mediaType === 'embed') {
           const embedBox = card.querySelector('.social-embed-box');
           if (embedBox) {
@@ -179,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (lightboxTitle) lightboxTitle.textContent = title;
-        if (lightboxCaption) lightboxCaption.textContent = caption;
+        if (lightboxCaption) lightboxCaption.innerHTML = caption;
 
         lightbox.style.display = 'flex';
       }

@@ -65,7 +65,7 @@
         <span class="media-stat-label">Target Collegiate Destination</span>
       </div>
       <div class="media-stat-box">
-        <span class="media-stat-num">10 Showcases</span>
+        <span class="media-stat-num">9 Showcases</span>
         <span class="media-stat-label">Film, Photos &amp; Code</span>
       </div>
     </div>
@@ -73,9 +73,9 @@
     <!-- Filter Control Bar -->
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.75rem;">
       <div class="media-filter-bar" id="mediaFilterBar">
-        <button type="button" class="media-filter-btn active" data-category="all">All Media (10)</button>
+        <button type="button" class="media-filter-btn active" data-category="all">All Media (9)</button>
         <button type="button" class="media-filter-btn" data-category="athletics">🏈 Football &amp; Film</button>
-        <button type="button" class="media-filter-btn" data-category="photo">📸 Photography</button>
+        <button type="button" class="media-filter-btn" data-category="photo">📸 Photography &amp; Favorites</button>
         <button type="button" class="media-filter-btn" data-category="tech">💻 STEM &amp; Tech</button>
       </div>
       <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;">
@@ -92,13 +92,13 @@
         data-category="athletics"
         data-type="hudl" 
         data-src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf"
-        data-title="Tristen Campbell - Otay Ranch High School Football Highlights"
+        data-title="Tristen Campbell Football Highlight"
         data-caption="Official Hudl football game film featuring play highlights by Tristen Campbell against Otay Ranch High School."
       >
         <div class="card-media-wrapper" style="position: relative; background: #000;">
           <iframe 
             src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
-            title="Tristen Campbell Otay Ranch High School Highlights on Hudl"
+            title="Tristen Campbell Football Highlight on Hudl"
             allowfullscreen
             loading="lazy"
             style="width: 100%; height: 100%; border: none;"
@@ -109,7 +109,7 @@
             <span class="card-type-tag tag-hudl">🏈 Hudl Highlight Reel</span>
             <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">VERIFIED</span>
           </div>
-          <h2 class="card-title">Otay Ranch Football Highlights</h2>
+          <h2 class="card-title">Tristen Campbell Football Highlight</h2>
           <p class="card-caption">
             Official Hudl game footage and athletic plays by Tristen Campbell against Otay Ranch High School.
           </p>
@@ -147,22 +147,42 @@
         </div>
       </article>
 
-      <!-- Card 3: Football Game Day Focus -->
+      <!-- Card 3: My Favorite Sport (Football) -->
       <article 
-        class="media-gallery-card" 
+        class="media-gallery-card sport-card" 
+        id="favorite-sport-football"
         data-category="athletics"
         data-type="image" 
-        data-src="./assets/images/football-game-focus.jpg"
-        data-title="Game Day Focus"
-        data-caption="As a freshman playing on Thursday nights, every game is a chance to learn, compete, and grow with my team."
+        data-src="https://img.magnific.com/free-photo/football-ball-rugby-field_23-2151909689.jpg?semt=ais_hybrid&amp;w=740&amp;q=80"
+        data-title="My favorite sport: Football"
+        data-caption="My favorite sport is football — competing under the Thursday night lights for Grossmont High, playing hard as a freshman, and working with my teammates toward excellence on the gridiron."
       >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/football-game-focus.jpg" alt="Football player focused before kickoff">
+        <div class="card-media-wrapper" style="position: relative; background: #0c1c2e;">
+          <img 
+            src="https://img.magnific.com/free-photo/football-ball-rugby-field_23-2151909689.jpg?semt=ais_hybrid&amp;w=740&amp;q=80" 
+            alt="Football on the field - My Favorite Sport"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
         </div>
         <div class="card-body">
-          <span class="card-type-tag tag-athletics">Athletics Film</span>
-          <h2 class="card-title">Game Day Focus</h2>
-          <p class="card-caption">As a freshman playing on Thursday nights, every game is a chance to learn, compete, and grow with my team.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(32, 113, 161, 0.12); color: #2071a1; border-color: rgba(32, 113, 161, 0.3);">🏈 Favorite Sport</span>
+            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">GROSSMONT HIGH</span>
+          </div>
+          <h2 class="card-title">My favorite sport</h2>
+          <p class="card-caption">My favorite sport is <strong>football</strong> — playing under the Thursday night lights for Grossmont High, competing with heart, and striving for collegiate athletic greatness.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="#football-highlights" 
+              class="btn btn-sm"
+              style="background: #2071a1; color: #ffffff; border: 1px solid #2071a1; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              View Game Film 🎬
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Thursday Night Lights</span>
+          </div>
         </div>
       </article>
 
@@ -219,98 +239,161 @@
         </div>
       </article>
 
-      <!-- Card 6: Robotics & STEM (Image) -->
+      <!-- Card 6: My Favorite Color (Blue) -->
       <article 
-        class="media-gallery-card" 
-        data-category="tech"
-        data-type="image" 
-        data-src="./assets/images/robotics-stem.jpg"
-        data-title="Robotics Team Build Lab"
-        data-caption="Collaborating on motor microcontroller circuits and automated obstacle-avoidance logic."
-      >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/robotics-stem.jpg" alt="Robotics Team Build Lab">
-        </div>
-        <div class="card-body">
-          <span class="card-type-tag tag-tech">STEM Lab</span>
-          <h2 class="card-title">High School Robotics Lab</h2>
-          <p class="card-caption">Collaborating on motor microcontroller circuits and automated obstacle-avoidance logic.</p>
-        </div>
-      </article>
-
-      <!-- Card 7: Science Fair Showcase (Image) -->
-      <article 
-        class="media-gallery-card" 
-        data-category="tech"
-        data-type="image" 
-        data-src="./assets/images/science-fair.jpg"
-        data-title="Regional Science & Engineering Fair"
-        data-caption="Presenting an interactive sensor data visualizer at the regional science fair."
-      >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/science-fair.jpg" alt="Science and Engineering Fair">
-        </div>
-        <div class="card-body">
-          <span class="card-type-tag tag-tech">Presentation</span>
-          <h2 class="card-title">Science Fair Presentation</h2>
-          <p class="card-caption">Presenting an interactive sensor data visualizer at the regional science fair.</p>
-        </div>
-      </article>
-
-      <!-- Card 8: Photography Gear (Image) -->
-      <article 
-        class="media-gallery-card" 
+        class="media-gallery-card color-card" 
+        id="favorite-color-blue"
         data-category="photo"
         data-type="image" 
-        data-src="./assets/images/photography-camera.jpg"
-        data-title="Camera Gear & 35mm Prime Lens"
-        data-caption="Equipped for architectural, landscape, and sports photojournalism around school."
+        data-src="https://img.magnific.com/free-photo/abstract-textured-backgound_1258-30522.jpg?semt=ais_hybrid&amp;w=740&amp;q=80"
+        data-title="My favorite color: Blue"
+        data-caption="My favorite color is blue — representing focus, energy, and depth, both on the football field and across my personal style."
       >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/photography-camera.jpg" alt="Camera Gear and Lens">
+        <div class="card-media-wrapper" style="position: relative; background: #0a192f;">
+          <img 
+            src="https://img.magnific.com/free-photo/abstract-textured-backgound_1258-30522.jpg?semt=ais_hybrid&amp;w=740&amp;q=80" 
+            alt="Abstract Textured Blue - Favorite Color"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
-          <h2 class="card-title">Photography Kit &amp; Gear</h2>
-          <p class="card-caption">Equipped for architectural, landscape, and sports photojournalism around school.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(37, 99, 235, 0.12); color: #2563eb; border-color: rgba(37, 99, 235, 0.3);">🎨 Favorite Color</span>
+            <span style="font-size: 0.72rem; color: #2563eb; font-family: monospace; font-weight: 700;">ROYAL BLUE</span>
+          </div>
+          <h2 class="card-title">My favorite color</h2>
+          <p class="card-caption">My favorite color is <strong>blue</strong> — representing confidence, calm focus, and energy both under the game lights and in my design projects.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #2563eb; display: inline-flex; align-items: center; gap: 0.35rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #2563eb; display: inline-block;"></span> #2563EB • Deep Blue
+            </span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Theme Signature</span>
+          </div>
         </div>
       </article>
 
-      <!-- Card 9: Campus Study & Library (Image) -->
+      <!-- Card 7: My Favorite Show (Welcome to Derry) -->
       <article 
-        class="media-gallery-card" 
+        class="media-gallery-card tv-show-card" 
+        id="favorite-show-derry"
         data-category="photo"
         data-type="image" 
-        data-src="./assets/images/campus-library.jpg"
-        data-title="Honors Study Sessions"
-        data-caption="Collaborating with fellow classmates on AP Calculus problem sets and coding peer reviews."
+        data-src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/6c39354a-c52d-46d7-982c-b5d196988189/a33d69ce-9897-11f0-a058-0afffffa4605?host=wbd-images.prod-vod.h264.io&amp;partner=beamcom"
+        data-title="My favorite show: Welcome to Derry"
+        data-caption="My favorite show is Welcome to Derry (It: Welcome to Derry) — the prequel series exploring the dark origins and haunting history of Derry, Maine."
       >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/campus-library.jpg" alt="Campus Library Study Sessions">
+        <div class="card-media-wrapper" style="position: relative; background: #0b0c10;">
+          <img 
+            src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/6c39354a-c52d-46d7-982c-b5d196988189/a33d69ce-9897-11f0-a058-0afffffa4605?host=wbd-images.prod-vod.h264.io&amp;partner=beamcom" 
+            alt="Welcome to Derry - Favorite Show"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
         </div>
         <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
-          <h2 class="card-title">Academic Study Circle</h2>
-          <p class="card-caption">Collaborating with fellow classmates on AP Calculus problem sets and coding peer reviews.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(185, 28, 28, 0.12); color: #b91c1c; border-color: rgba(185, 28, 28, 0.3);">📺 Favorite Show</span>
+            <span style="font-size: 0.72rem; color: #b91c1c; font-family: monospace; font-weight: 700;">MAX ORIGINAL</span>
+          </div>
+          <h2 class="card-title">My favorite show</h2>
+          <p class="card-caption">My favorite show is <strong>Welcome to Derry</strong> — the gripping series expanding the Stephen King IT universe and the eerie secrets of Derry, Maine.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="https://www.max.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-sm"
+              style="background: #002be7; color: #ffffff; border: 1px solid #002be7; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              Watch on Max ↗
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Warner Bros. Discovery</span>
+          </div>
         </div>
       </article>
 
-      <!-- Card 10: Tech Community Meetup (Image) -->
+      <!-- Card 8: My Favorite Restaurant (Chili's) -->
       <article 
-        class="media-gallery-card" 
-        data-category="tech"
+        class="media-gallery-card restaurant-card" 
+        id="favorite-restaurant-chilis"
+        data-category="photo"
         data-type="image" 
-        data-src="./assets/images/tech-community.jpg"
-        data-title="Student Coding Club Leadership"
-        data-caption="Leading an after-school workshop introducing younger students to web foundations and Git."
+        data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpVEk40QOviZ_UK3XowjWKInPO8uTnRjDj5ef5z1py46jMZxCXlo6vn0&amp;s=10"
+        data-title="My favorite restaurant: Chili's"
+        data-caption="My favorite restaurant is Chili's Grill &amp; Bar — famous for sizzling fajitas, baby back ribs, big mouth burgers, and fresh bottomless chips &amp; salsa."
       >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/tech-community.jpg" alt="Student Coding Workshop">
+        <div class="card-media-wrapper" style="position: relative; background: #231f20;">
+          <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpVEk40QOviZ_UK3XowjWKInPO8uTnRjDj5ef5z1py46jMZxCXlo6vn0&amp;s=10" 
+            alt="Chili's Grill &amp; Bar - Favorite Restaurant"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
         </div>
         <div class="card-body">
-          <span class="card-type-tag tag-tech">Workshop</span>
-          <h2 class="card-title">Coding Club Workshop</h2>
-          <p class="card-caption">Leading an after-school workshop introducing younger students to web foundations and Git.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(220, 38, 38, 0.12); color: #dc2626; border-color: rgba(220, 38, 38, 0.3);">🌶️ Favorite Restaurant</span>
+            <span style="font-size: 0.72rem; color: #dc2626; font-family: monospace; font-weight: 700;">CHILI'S</span>
+          </div>
+          <h2 class="card-title">My favorite restaurant</h2>
+          <p class="card-caption">My favorite restaurant is <strong>Chili's</strong> (Chili's Grill &amp; Bar) — famous for sizzling fajitas, baby back ribs, big mouth burgers, and chips with salsa.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="https://www.chilis.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-sm"
+              style="background: #dc2626; color: #ffffff; border: 1px solid #dc2626; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              Visit Chili's ↗
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Chili's Grill &amp; Bar</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9: My Favorite Movie (Black Panther) -->
+      <article 
+        class="media-gallery-card movie-card" 
+        id="black-panther-movie"
+        data-category="photo"
+        data-type="image" 
+        data-src="https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg?region=0%2C0%2C540%2C810"
+        data-title="My favorite movie: Black Panther"
+        data-caption="Marvel Studios' Black Panther — Official poster artwork. My favorite movie featuring Chadwick Boseman as King T'Challa of Wakanda. &lt;a href='https://youtu.be/xjDjIWPwcPU?si=iiu5HHz4GuYsc24R' target='_blank' rel='noopener noreferrer' style='color: #ea580c; font-weight: 700; text-decoration: underline;'&gt;Watch Official Trailer on YouTube ↗&lt;/a&gt;"
+      >
+        <div class="card-media-wrapper" style="position: relative; background: #0b0c10;">
+          <img 
+            src="https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg?region=0%2C0%2C540%2C810" 
+            alt="Marvel Studios' Black Panther - Favorite Movie"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;"
+          >
+        </div>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(147, 51, 234, 0.12); color: #9333ea; border-color: rgba(147, 51, 234, 0.3);">🎬 Favorite Movie</span>
+            <span style="font-size: 0.72rem; color: #a855f7; font-family: monospace; font-weight: 700;">WAKANDA FOREVER</span>
+          </div>
+          <h2 class="card-title">My favorite movie</h2>
+          <p class="card-caption">My favorite movie is <strong>Black Panther</strong> — featuring the legendary superhero of Wakanda, groundbreaking visuals, and inspiring storytelling.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="https://youtu.be/xjDjIWPwcPU?si=iiu5HHz4GuYsc24R" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-sm"
+              style="background: #e50914; color: #ffffff; border: 1px solid #e50914; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              Watch on YouTube ↗
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Marvel Studios</span>
+          </div>
         </div>
       </article>
     </div>
