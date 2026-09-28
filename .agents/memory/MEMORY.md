@@ -1,1 +1,2 @@
 - [App Storage provisioning](app-storage-provisioning.md) — the SDK needs a provisioned App Storage bucket; fail closed in production rather than silently using local files.
+- [Dual-server development](dual-server-development.md) — keep the React/Vite preview and Express API running together during development.
