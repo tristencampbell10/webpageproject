@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media | Tristen Campbell Portfolio</title>
   <meta name="description" content="Media showcase featuring photos, video walkthroughs, and developer milestones from high school student Tristen Campbell.">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="theme-light-blue-cream">
@@ -44,7 +43,7 @@
     <div class="page-header">
       <h1 class="page-title page-title-media">Media</h1>
       <p class="page-description">
-        A collection of football highlights, favorite media, and projects connected to my interests and high school experience.
+        A curated showcase of verified Hudl game film, photography, and student highlights documenting my high school football journey at Grossmont High, STEM coursework, and creative projects.
       </p>
       <div style="margin-top: 1.15rem;">
         <span class="page-category-badge badge-media" style="margin-bottom: 0;">🎬 GAME FILM, HIGHLIGHTS &amp; VISUAL ARCHIVE</span>
@@ -54,8 +53,8 @@
     <!-- Quick Media & Athlete Metrics Ribbon -->
     <div class="media-stats-bar">
       <div class="media-stat-box">
-        <span class="media-stat-num orange">Hudl Highlights</span>
-        <span class="media-stat-label">Football Game Film</span>
+        <span class="media-stat-num orange">Hudl Verified</span>
+        <span class="media-stat-label">Game Film: Otay Ranch</span>
       </div>
       <div class="media-stat-box">
         <span class="media-stat-num blue">Grossmont High</span>
@@ -86,33 +85,33 @@
 
     <!-- Gallery Grid with Media Cards -->
     <div class="media-gallery-grid" id="mediaGallery">
-      <!-- Card 1: Football highlight video hosted on Hudl -->
+      <!-- Card 1: Football Highlight Reel (Hudl Film) -->
       <article 
         class="media-gallery-card hudl-card" 
         id="football-highlights"
         data-category="athletics"
-        data-type="image" 
-        data-src="./assets/images/hobby-football.jpg"
+        data-type="hudl" 
+        data-src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
         data-title="Tristen Campbell Football Highlight"
-        data-caption="Football highlight video hosted on Hudl. Open the original Hudl page to watch the game film."
+        data-caption="Official Hudl football game film featuring play highlights by Tristen Campbell against Otay Ranch High School."
       >
         <div class="card-media-wrapper" style="position: relative; background: #000;">
-          <img
-            src="./assets/images/hobby-football.jpg"
-            alt="Football image linking to Tristen Campbell's Hudl highlight video"
+          <iframe 
+            src="https://www.hudl.com/embed/video/3/23134114/6aad40878c39b2e02772afcf" 
+            title="Tristen Campbell Football Highlight on Hudl"
+            allowfullscreen
             loading="lazy"
-            style="width: 100%; height: 100%; object-fit: cover;"
-          >
-          <span aria-hidden="true" style="position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 2.75rem; text-shadow: 0 2px 12px #000;">▶</span>
+            style="width: 100%; height: 100%; border: none;"
+          ></iframe>
         </div>
         <div class="card-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <span class="card-type-tag tag-hudl">🏈 Football Video</span>
-            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">HUDL</span>
+            <span class="card-type-tag tag-hudl">🏈 Hudl Highlight Reel</span>
+            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">VERIFIED</span>
           </div>
           <h2 class="card-title">Tristen Campbell Football Highlight</h2>
           <p class="card-caption">
-            Open the original Hudl page to watch the football game video.
+            Official Hudl game footage and athletic plays by Tristen Campbell against Otay Ranch High School.
           </p>
           <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
             <a 
@@ -122,79 +121,103 @@
               class="btn btn-sm"
               style="background: #ff6600; color: #ffffff; border: 1px solid #ff6600; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none;"
             >
-              Watch video on Hudl ↗
+              Open on Hudl ↗
             </a>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Grossmont High</span>
           </div>
         </div>
       </article>
 
-      <!-- Card 2: Student Portrait (Image) -->
+      <!-- Card 2: My Favorite Sport (Football - Game Day Focus #10) -->
       <article 
-        class="media-gallery-card" 
-        data-category="photo"
-        data-type="image" 
-        data-src="./assets/images/tristen-headshot.jpg"
-        data-title="Tristen Campbell - Student Profile"
-        data-caption="Official high school senior portrait and student profile photo."
-      >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/tristen-headshot.jpg" alt="Tristen Campbell Student Profile">
-        </div>
-        <div class="card-body">
-          <span class="card-type-tag">Photograph</span>
-          <h2 class="card-title">Student Portrait</h2>
-          <p class="card-caption">Student profile photo.</p>
-        </div>
-      </article>
-
-      <!-- Card 3: My Favorite Sport (Football) -->
-      <article 
-        class="media-gallery-card sport-card" 
+        class="media-gallery-card athlete-card" 
         id="favorite-sport-football"
         data-category="athletics"
         data-type="image" 
-        data-src="https://img.magnific.com/free-photo/football-ball-rugby-field_23-2151909689.jpg?semt=ais_hybrid&amp;w=740&amp;q=80"
+        data-src="./assets/images/tristen-game-day-10.jpg"
         data-title="My favorite sport: Football"
-        data-caption="My favorite sport is football — competing under the Thursday night lights for Grossmont High, playing hard as a freshman, and working with my teammates toward excellence on the gridiron."
+        data-caption="My favorite sport is football — suited up in jersey #10 for Grossmont High, competing with heart, and locked in with complete focus under the stadium lights."
       >
         <div class="card-media-wrapper" style="position: relative; background: #0c1c2e;">
           <img 
-            src="https://img.magnific.com/free-photo/football-ball-rugby-field_23-2151909689.jpg?semt=ais_hybrid&amp;w=740&amp;q=80" 
-            alt="Football on the field - My Favorite Sport"
+            src="./assets/images/tristen-game-day-10.jpg" 
+            alt="Tristen Campbell wearing jersey #10 on the Grossmont High football field - My Favorite Sport"
             loading="lazy"
-            referrerpolicy="no-referrer"
-            style="width: 100%; height: 100%; object-fit: cover;"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%;"
           >
         </div>
         <div class="card-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
             <span class="card-type-tag" style="background: rgba(32, 113, 161, 0.12); color: #2071a1; border-color: rgba(32, 113, 161, 0.3);">🏈 Favorite Sport</span>
-            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">GROSSMONT HIGH</span>
+            <span style="font-size: 0.72rem; color: #ff6600; font-family: monospace; font-weight: 700;">GROSSMONT #10</span>
           </div>
           <h2 class="card-title">My favorite sport</h2>
-          <p class="card-caption">My favorite sport is <strong>football</strong> — playing under the Thursday night lights for Grossmont High, competing with heart, and striving for collegiate athletic greatness.</p>
+          <p class="card-caption">
+            My favorite sport is <strong>football</strong> — suited up in jersey #10 for Grossmont High, competing with heart, and striving for collegiate athletic greatness.
+          </p>
           <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
             <a 
               href="#football-highlights" 
               class="btn btn-sm"
               style="background: #2071a1; color: #ffffff; border: 1px solid #2071a1; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
             >
-              View Game Film 🎬
+              Watch Game Film 🎬
             </a>
-            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Thursday Night Lights</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Jersey #10</span>
           </div>
         </div>
       </article>
 
-      <!-- Card 4: Real public GitHub profile and project -->
+      <!-- Card 3: My Dream College (LSU - Louisiana State University) -->
+      <article 
+        class="media-gallery-card lsu-card" 
+        id="dream-college-lsu"
+        data-category="athletics"
+        data-type="image" 
+        data-src="./assets/images/lsu-logo.jpg"
+        data-fallback-src="./assets/images/future-university.jpg"
+        data-title="My dream college: LSU"
+        data-caption="My dream college is Louisiana State University (LSU) in Baton Rouge — aiming to study Computer Science while competing at the highest collegiate level for the purple and gold LSU Tigers."
+      >
+        <div class="card-media-wrapper" style="position: relative; background: #2a0845;">
+          <img 
+            src="./assets/images/lsu-logo.jpg" 
+            alt="Louisiana State University (LSU) Tigers - Dream College"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='./assets/images/future-university.jpg';"
+            style="width: 100%; height: 100%; object-fit: contain; padding: 1.25rem; background: radial-gradient(circle, #3d1059 0%, #1a052e 100%);"
+          >
+        </div>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(147, 51, 234, 0.14); color: #7e22ce; border-color: rgba(147, 51, 234, 0.35);">🐯 Dream College</span>
+            <span style="font-size: 0.72rem; color: #f59e0b; font-family: monospace; font-weight: 700;">BATON ROUGE</span>
+          </div>
+          <h2 class="card-title">My dream college: LSU</h2>
+          <p class="card-caption">
+            My dream college is <strong>Louisiana State University (LSU)</strong> — aspiring to pursue Computer Science and represent the fighting Tigers in Baton Rouge!
+          </p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="./future.html" 
+              class="btn btn-sm"
+              style="background: #461D7C; color: #FDD023; border: 1px solid #FDD023; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              Future Goals ↗
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Geaux Tigers!</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Social Media Post / Embed (Social Embed) -->
       <article 
         class="media-gallery-card" 
         data-category="tech"
         data-type="embed" 
-        data-src="https://github.com/tristencampbell10"
-        data-title="Tristen Campbell's GitHub Profile"
-        data-caption="Open my public GitHub profile or view the portfolio project repository."
+        data-src="https://github.com/tristencampbell10/webpageproject"
+        data-title="GitHub Developer Update @tristencampbell10"
+        data-caption="Public announcement and commit milestone for the 6-page Webpage Project release."
       >
         <div class="card-media-wrapper">
           <div class="social-embed-box">
@@ -206,47 +229,29 @@
               </div>
             </div>
             <p class="social-embed-text">
-              <span id="githubActivityStatus" aria-live="polite">Loading recent public GitHub activity…</span>
+              🚀 Just committed the new Express server and Replit App Storage persistence logic for my High School Webpage Project!
             </p>
             <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-              <span>GitHub • Public Profile</span>
-              <a id="githubActivityLink" href="https://github.com/tristencampbell10" target="_blank" rel="noopener noreferrer" style="color: #2071a1; font-weight: 700;">Open Profile ↗</a>
+              <span>GitHub • Repository Release</span>
+              <a href="https://github.com/tristencampbell10/webpageproject" target="_blank" rel="noopener noreferrer" style="color: #2071a1; font-weight: 700;">Open Post ↗</a>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <span class="card-type-tag tag-social">GitHub Profile</span>
-          <h2 class="card-title">My GitHub Profile</h2>
-          <p class="card-caption">A live card for recent public project activity, linked to its original GitHub update.</p>
+          <span class="card-type-tag tag-social">Social Embed</span>
+          <h2 class="card-title">GitHub Project Announcement</h2>
+          <p class="card-caption">Public announcement and commit milestone for the 6-page Webpage Project release.</p>
         </div>
       </article>
 
-      <!-- Card 5: Coding Workspace (Image) -->
-      <article 
-        class="media-gallery-card" 
-        data-category="tech"
-        data-type="image" 
-        data-src="./assets/images/coding-workspace.jpg"
-        data-title="Workstation & Dual-Monitor Setup"
-        data-caption="My daily development environment where I code HTML5, CSS3, JavaScript, and Node.js applications."
-      >
-        <div class="card-media-wrapper">
-          <img src="./assets/images/coding-workspace.jpg" alt="Coding Workspace">
-        </div>
-        <div class="card-body">
-          <span class="card-type-tag tag-tech">Tech &amp; Code</span>
-          <h2 class="card-title">Developer Workspace</h2>
-          <p class="card-caption">My daily development environment where I code HTML5, CSS3, JavaScript, and Node.js applications.</p>
-        </div>
-      </article>
-
-      <!-- Card 6: My Favorite Color (Blue) -->
+      <!-- Card 5: My Favorite Color (Blue) -->
       <article 
         class="media-gallery-card color-card" 
         id="favorite-color-blue"
         data-category="photo"
         data-type="image" 
         data-src="https://img.magnific.com/free-photo/abstract-textured-backgound_1258-30522.jpg?semt=ais_hybrid&amp;w=740&amp;q=80"
+        data-fallback-src="./assets/images/nature-landscape.jpg"
         data-title="My favorite color: Blue"
         data-caption="My favorite color is blue — representing focus, energy, and depth, both on the football field and across my personal style."
       >
@@ -256,6 +261,7 @@
             alt="Abstract Textured Blue - Favorite Color"
             loading="lazy"
             referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/nature-landscape.jpg';"
             style="width: 100%; height: 100%; object-fit: cover;"
           >
         </div>
@@ -275,13 +281,14 @@
         </div>
       </article>
 
-      <!-- Card 7: My Favorite Show (Welcome to Derry) -->
+      <!-- Card 6: My Favorite Show (Welcome to Derry) -->
       <article 
         class="media-gallery-card tv-show-card" 
         id="favorite-show-derry"
         data-category="photo"
         data-type="image" 
         data-src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/6c39354a-c52d-46d7-982c-b5d196988189/a33d69ce-9897-11f0-a058-0afffffa4605?host=wbd-images.prod-vod.h264.io&amp;partner=beamcom"
+        data-fallback-src="./assets/images/science-fair.jpg"
         data-title="My favorite show: Welcome to Derry"
         data-caption="My favorite show is Welcome to Derry (It: Welcome to Derry) — the prequel series exploring the dark origins and haunting history of Derry, Maine."
       >
@@ -291,6 +298,7 @@
             alt="Welcome to Derry - Favorite Show"
             loading="lazy"
             referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/science-fair.jpg';"
             style="width: 100%; height: 100%; object-fit: cover;"
           >
         </div>
@@ -316,13 +324,14 @@
         </div>
       </article>
 
-      <!-- Card 8: My Favorite Restaurant (Chili's) -->
+      <!-- Card 7: My Favorite Restaurant (Chili's) -->
       <article 
         class="media-gallery-card restaurant-card" 
         id="favorite-restaurant-chilis"
         data-category="photo"
         data-type="image" 
         data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpVEk40QOviZ_UK3XowjWKInPO8uTnRjDj5ef5z1py46jMZxCXlo6vn0&amp;s=10"
+        data-fallback-src="./assets/images/tech-community.jpg"
         data-title="My favorite restaurant: Chili's"
         data-caption="My favorite restaurant is Chili's Grill &amp; Bar — famous for sizzling fajitas, baby back ribs, big mouth burgers, and fresh bottomless chips &amp; salsa."
       >
@@ -332,6 +341,7 @@
             alt="Chili's Grill &amp; Bar - Favorite Restaurant"
             loading="lazy"
             referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/tech-community.jpg';"
             style="width: 100%; height: 100%; object-fit: cover;"
           >
         </div>
@@ -357,13 +367,14 @@
         </div>
       </article>
 
-      <!-- Card 9: My Favorite Movie (Black Panther) -->
+      <!-- Card 8: My Favorite Movie (Black Panther) -->
       <article 
         class="media-gallery-card movie-card" 
         id="black-panther-movie"
         data-category="photo"
         data-type="image" 
         data-src="https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg?region=0%2C0%2C540%2C810"
+        data-fallback-src="./assets/images/black-panther-movie.svg"
         data-title="My favorite movie: Black Panther"
         data-caption="Marvel Studios' Black Panther — Official poster artwork. My favorite movie featuring Chadwick Boseman as King T'Challa of Wakanda. &lt;a href='https://youtu.be/xjDjIWPwcPU?si=iiu5HHz4GuYsc24R' target='_blank' rel='noopener noreferrer' style='color: #ea580c; font-weight: 700; text-decoration: underline;'&gt;Watch Official Trailer on YouTube ↗&lt;/a&gt;"
       >
@@ -373,6 +384,7 @@
             alt="Marvel Studios' Black Panther - Favorite Movie"
             loading="lazy"
             referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/black-panther-movie.svg';"
             style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;"
           >
         </div>
@@ -394,6 +406,47 @@
               Watch on YouTube ↗
             </a>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Marvel Studios</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9: My Favorite Video Game (NBA 2K21) -->
+      <article 
+        class="media-gallery-card game-card" 
+        id="favorite-game-2k21"
+        data-category="photo"
+        data-type="image" 
+        data-src="https://media.gamestop.com/i/gamestop/11103703/NBA-2K21?w=768&amp;h=768&amp;fmt=auto"
+        data-fallback-src="./assets/images/nba-2k21.jpg"
+        data-title="My favorite video game: NBA 2K21"
+        data-caption="My favorite video game is NBA 2K21 (2k21) — featuring Damian Lillard on the cover, top-tier basketball gameplay, MyCareer storyline mode, and high-energy competitive squad matches with friends."
+      >
+        <div class="card-media-wrapper" style="position: relative; background: #0e1118;">
+          <img 
+            src="https://media.gamestop.com/i/gamestop/11103703/NBA-2K21?w=768&amp;h=768&amp;fmt=auto" 
+            alt="NBA 2K21 Cover Art - My Favorite Video Game"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='./assets/images/nba-2k21.jpg';"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center top;"
+          >
+        </div>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <span class="card-type-tag" style="background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.3);">🎮 Favorite Video Game</span>
+            <span style="font-size: 0.72rem; color: #059669; font-family: monospace; font-weight: 700;">2K SPORTS</span>
+          </div>
+          <h2 class="card-title">My favorite video game</h2>
+          <p class="card-caption">My favorite video game is <strong>NBA 2K21</strong> (2k21) — competing with friends, dominating the court with Damian Lillard, running the neighborhood park, and perfecting my jumper.</p>
+          <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between;">
+            <a 
+              href="./hobbies.html" 
+              class="btn btn-sm"
+              style="background: #059669; color: #ffffff; border: 1px solid #059669; border-radius: 9999px; font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+            >
+              Gaming Hobbies 🎮
+            </a>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">NBA 2K21</span>
           </div>
         </div>
       </article>
