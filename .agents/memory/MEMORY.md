@@ -1,1 +1,0 @@
-- [App Storage provisioning](app-storage-provisioning.md) — the SDK needs a provisioned App Storage bucket; fail closed in production rather than silently using local files.

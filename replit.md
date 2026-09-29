@@ -9,4 +9,4 @@ npm run dev
 
 The Replit workflow runs the same server on port 5000 so it is available in Preview. The app also supports the `PORT` environment variable when started outside Replit.
 
-The development workflow uses a local contact-data file only when Replit App Storage is unavailable. Published runs require Replit App Storage, a strong `ADMIN_PASSWORD`, and a `SESSION_SECRET` configured in Replit Secrets; the server does not use a default admin password or local-file fallback in production.
+The admin login uses `ADMIN_PASSWORD` when that environment variable is set; otherwise the server's current fallback password is used.

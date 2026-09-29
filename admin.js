@@ -8,7 +8,6 @@ let authToken = sessionStorage.getItem('admin_token') || null;
 let allMessages = [];
 let currentFilter = 'all';
 let reasonChartInstance = null;
-let isLoadingMessages = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   const loginSection = document.getElementById('adminLoginSection');
@@ -94,18 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showLogin();
   }
 
-  window.setInterval(() => {
-    if (authToken && document.visibilityState !== 'hidden') {
-      loadMessages();
-    }
-  }, 15000);
-
-  document.addEventListener('visibilitychange', () => {
-    if (authToken && document.visibilityState === 'visible') {
-      loadMessages();
-    }
-  });
-
   function showLogin() {
     if (loginSection) loginSection.style.display = 'block';
     if (dashboardSection) dashboardSection.style.display = 'none';
@@ -121,8 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * Fetch messages from protected server endpoint
  */
 async function loadMessages() {
-  if (!authToken || isLoadingMessages) return;
-  isLoadingMessages = true;
+  if (!authToken) return;
 
   try {
     const response = await fetch('/api/admin/messages', {
@@ -157,8 +143,6 @@ async function loadMessages() {
     updateReasonChart();
   } catch (err) {
     console.error('Failed to load contact messages:', err);
-  } finally {
-    isLoadingMessages = false;
   }
 }
 

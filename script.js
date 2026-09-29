@@ -117,13 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle media card clicks
   const mediaCards = document.querySelectorAll('.media-gallery-card');
 
-  // Show the real gallery size rather than relying on a hand-maintained label.
-  const allMediaFilter = [...document.querySelectorAll('.media-filter-btn')]
-    .find((btn) => btn.dataset.category === 'all');
-  if (allMediaFilter) {
-    allMediaFilter.textContent = `All Media (${mediaCards.length})`;
-  }
-
   // Media category filtering buttons
   const filterBtns = document.querySelectorAll('.media-filter-btn');
   if (filterBtns.length > 0) {
@@ -162,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const img = document.createElement('img');
           img.src = mediaSrc;
           img.alt = title;
-          img.referrerPolicy = 'no-referrer';
           lightboxMediaContainer.appendChild(img);
         } else if (mediaType === 'video') {
           const vid = document.createElement('video');
@@ -179,17 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
           iframe.style.borderRadius = '12px';
           iframe.setAttribute('allowfullscreen', 'true');
           lightboxMediaContainer.appendChild(iframe);
-        } else if (mediaType === 'youtube') {
-          const iframe = document.createElement('iframe');
-          const autoSrc = mediaSrc.includes('?') ? `${mediaSrc}&autoplay=1` : `${mediaSrc}?autoplay=1`;
-          iframe.src = autoSrc;
-          iframe.style.width = '100%';
-          iframe.style.height = '420px';
-          iframe.style.border = 'none';
-          iframe.style.borderRadius = '12px';
-          iframe.setAttribute('allowfullscreen', 'true');
-          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-          lightboxMediaContainer.appendChild(iframe);
         } else if (mediaType === 'embed') {
           const embedBox = card.querySelector('.social-embed-box');
           if (embedBox) {
@@ -198,51 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (lightboxTitle) lightboxTitle.textContent = title;
-        if (lightboxCaption) lightboxCaption.innerHTML = caption;
+        if (lightboxCaption) lightboxCaption.textContent = caption;
 
         lightbox.style.display = 'flex';
       }
     });
   });
-
-  // Render a genuine public GitHub event when available; keep the profile link
-  // usable if GitHub is offline or its public API is rate-limited.
-  const githubActivityStatus = document.getElementById('githubActivityStatus');
-  const githubActivityLink = document.getElementById('githubActivityLink');
-  if (githubActivityStatus && githubActivityLink) {
-    fetch('https://api.github.com/users/tristencampbell10/events/public?per_page=20', {
-      headers: { Accept: 'application/vnd.github+json' },
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error(`GitHub activity request failed (${response.status})`);
-        return response.json();
-      })
-      .then((events) => {
-        const recentPush = events.find((event) =>
-          event.type === 'PushEvent'
-          && event.actor?.login === 'tristencampbell10'
-          && event.payload?.head
-          && event.repo?.name,
-        );
-        if (!recentPush) {
-          githubActivityStatus.textContent = 'View my public repositories and project history.';
-          return;
-        }
-
-        const repository = recentPush.repo.name;
-        const commit = recentPush.payload.commits?.at(-1);
-        const commitUrl = `https://github.com/${repository}/commit/${recentPush.payload.head}`;
-        githubActivityStatus.textContent = commit?.message
-          ? `Recent update: ${commit.message.split('\n')[0]}`
-          : `Recent public update to ${repository}.`;
-        githubActivityLink.href = commitUrl;
-        githubActivityLink.textContent = 'Open original update ↗';
-      })
-      .catch((error) => {
-        console.warn('Unable to load public GitHub activity:', error.message);
-        githubActivityStatus.textContent = 'View my public profile and project repository.';
-      });
-  }
 
   if (lightboxClose && lightbox) {
     lightboxClose.addEventListener('click', () => {
