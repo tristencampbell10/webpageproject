@@ -103,8 +103,8 @@ async function writeContacts(contacts) {
 }
 
 // Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '25mb' }));
+app.use(express.urlencoded({ limit: '25mb', extended: true }));
 
 // Backwards-compatibility redirects (placed before express.static)
 app.get(['/academics.html', '/academics', '/choice1.html'], (req, res) => res.redirect(301, '/hobbies.html'));
@@ -160,6 +160,7 @@ app.post('/api/contact', async (req, res) => {
     const contacts = await readContacts();
 
     // Create new contact record
+    const timestamp = new Date().toISOString();
     const newRecord = {
       id: crypto.randomUUID ? crypto.randomUUID() : 'msg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8),
       firstName: firstName.trim(),
@@ -167,7 +168,9 @@ app.post('/api/contact', async (req, res) => {
       email: email.trim().toLowerCase(),
       reason: reason,
       message: message.trim(),
-      submittedAt: new Date().toISOString(),
+      submittedAt: timestamp,
+      timestamp: timestamp,
+      submissionTimestamp: timestamp,
       replied: false,
       repliedAt: null,
     };
@@ -213,7 +216,7 @@ app.get('/api/admin/messages', requireAdminAuth, async (req, res) => {
   try {
     const contacts = await readContacts();
     // Return newest first
-    const sorted = [...contacts].sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+    const sorted = [...contacts].sort((a, b) => new Date(b.submittedAt || b.timestamp || 0) - new Date(a.submittedAt || a.timestamp || 0));
     return res.json(sorted);
   } catch (err) {
     console.error('[API] GET /api/admin/messages error:', err);
