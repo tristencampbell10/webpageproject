@@ -259,7 +259,6 @@ app.post('/api/contact', async (req, res) => {
     const contacts = await readContacts();
 
     // Create new contact record
-    const timestamp = new Date().toISOString();
     const newRecord = {
       id: crypto.randomUUID ? crypto.randomUUID() : 'msg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8),
       firstName: firstName.trim(),
@@ -267,9 +266,7 @@ app.post('/api/contact', async (req, res) => {
       email: email.trim().toLowerCase(),
       reason: reason,
       message: message.trim(),
-      submittedAt: timestamp,
-      timestamp: timestamp,
-      submissionTimestamp: timestamp,
+      submittedAt: new Date().toISOString(),
       replied: false,
       repliedAt: null,
     };
@@ -324,7 +321,7 @@ app.get('/api/admin/messages', requireAdminAuth, async (req, res) => {
   try {
     const contacts = await readContacts();
     // Return newest first
-    const sorted = [...contacts].sort((a, b) => new Date(b.submittedAt || b.timestamp || 0) - new Date(a.submittedAt || a.timestamp || 0));
+    const sorted = [...contacts].sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
     return res.json(sorted);
   } catch (err) {
     console.error('[API] GET /api/admin/messages error:', err);

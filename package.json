@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "node dev.js",
+    "dev": "node server.js",
     "start": "node server.js",
-    "lint": "node --check server.js script.js travel.js admin.js",
+    "lint": "node --check server.js script.js travel.js",
     "build": "node -e 'console.log(\"Build ready\")'"
   },
   "dependencies": {

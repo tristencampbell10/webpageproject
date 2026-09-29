@@ -163,13 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
           img.src = mediaSrc;
           img.alt = title;
           img.referrerPolicy = 'no-referrer';
-          const fallbackSrc = card.dataset.fallbackSrc;
-          if (fallbackSrc) {
-            img.onerror = function() {
-              this.onerror = null;
-              this.src = fallbackSrc;
-            };
-          }
           lightboxMediaContainer.appendChild(img);
         } else if (mediaType === 'video') {
           const vid = document.createElement('video');
@@ -202,11 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
           if (embedBox) {
             lightboxMediaContainer.appendChild(embedBox.cloneNode(true));
           }
-          const linkBox = document.createElement('div');
-          linkBox.style.marginTop = '1rem';
-          linkBox.style.textAlign = 'center';
-          linkBox.innerHTML = `<a href="${mediaSrc}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill" style="display: inline-block;">Open Original Social Media Post ↗</a>`;
-          lightboxMediaContainer.appendChild(linkBox);
         }
 
         if (lightboxTitle) lightboxTitle.textContent = title;
